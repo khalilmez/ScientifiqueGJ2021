@@ -680,12 +680,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2003288017396880766, guid: 68ac3b60ebc5fed418a67574e073ff48,
         type: 3}
-      propertyPath: m_FlipX
-      value: 0
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2003288017396880766, guid: 68ac3b60ebc5fed418a67574e073ff48,
         type: 3}
-      propertyPath: m_FlipY
+      propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2003288017396880766, guid: 68ac3b60ebc5fed418a67574e073ff48,
