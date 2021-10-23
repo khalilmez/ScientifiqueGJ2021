@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: -869579479
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4,
+  m_Sprite: {fileID: -2806012975131580994, guid: d73f967faa978cf4e84a6d4e1aff4ef6,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -114,6 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cellType: 0
+  cellsToActivateByScroll: []
   spriteSelection: {fileID: 8199724201194297781}
   spriteHover: {fileID: 5611409422494995787}
   spriteType: {fileID: 311040697188184208}
