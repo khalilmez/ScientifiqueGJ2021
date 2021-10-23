@@ -29,7 +29,7 @@ public class QuestDisplay : MonoBehaviour
 	public void Init()
 	{
 		group.interactable = true;
-		group.alpha = 1f;
+		StartCoroutine(DisplayQuest());
 
 		choicesDictionary = new Dictionary<string, Choice>();
 		Title.text = quest.title;
@@ -79,6 +79,14 @@ public class QuestDisplay : MonoBehaviour
 
 				Init();
 			}
+		}
+	}
+	private IEnumerator DisplayQuest()
+	{
+		for(int i = 0; i < 10; i++)
+        {
+			group.alpha += 0.1f;
+			yield return new WaitForSeconds(0.1f);
 		}
 	}
 }

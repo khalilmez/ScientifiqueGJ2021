@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
 	[SerializeField] private CharacterArchetype characterArchetype;
 	[SerializeField] private Dependency<SpriteRenderer> _spriteRenderer;
-
+	public Animator animator;
 	private SpriteRenderer spriteRenderer => _spriteRenderer.Resolve(this);
 
 	private Tween mover;
@@ -85,7 +85,7 @@ public class PlayerController : MonoBehaviour
 		//	Culture = Archetype.ArchetypeChoosen.Culture;
 		//	Gold = Archetype.ArchetypeChoosen.Gold;
 		//}
-
+		animator = GetComponentInChildren<Animator>();
 		Health = characterArchetype.health.RandomValue;
 		Gold = characterArchetype.gold.RandomValue;
 
@@ -108,7 +108,8 @@ public class PlayerController : MonoBehaviour
 	{
 		if (!cell.IsSelected)
 			return;
-
+		animator.SetBool("IsMoving", true);
+		Debug.Log("Started Moving");
 		StartCoroutine(MoveCore(cell, duration));
 	}
 
@@ -123,6 +124,8 @@ public class PlayerController : MonoBehaviour
 		cell.DoEntranceAction();
 
 		Health -= Map.Config.healthConsumption;
+		animator.SetBool("IsMoving", false);
+		Debug.Log("Finished Moving");
 
 		ActiveCrossCells();
 	}
