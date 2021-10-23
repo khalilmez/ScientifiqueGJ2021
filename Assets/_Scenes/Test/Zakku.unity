@@ -332,17 +332,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: MapController
       objectReference: {fileID: 0}
-    - target: {fileID: 2003288018293551640, guid: 68ac3b60ebc5fed418a67574e073ff48,
+    - target: {fileID: 2003288018882077148, guid: 68ac3b60ebc5fed418a67574e073ff48,
         type: 3}
-      propertyPath: cellType
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2003288018882077148, guid: 68ac3b60ebc5fed418a67574e073ff48,
+        type: 3}
+      propertyPath: m_Size.y
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2003288018882077148, guid: 68ac3b60ebc5fed418a67574e073ff48,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: aa4455a63c962684f8e8f3de00bb6874,
+      objectReference: {fileID: 21300000, guid: fc54dcfe8489a5444ab02cfc5ad8ea71,
         type: 3}
+    - target: {fileID: 2003288018882077148, guid: 68ac3b60ebc5fed418a67574e073ff48,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68ac3b60ebc5fed418a67574e073ff48, type: 3}
 --- !u!1001 &3502643509986546824
@@ -1024,7 +1034,7 @@ PrefabInstance:
     - target: {fileID: 6851116748719242686, guid: 54c704130840a174aa063e00cd220365,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 24.800068
+      value: 24.800083
       objectReference: {fileID: 0}
     - target: {fileID: 6901397107661893648, guid: 54c704130840a174aa063e00cd220365,
         type: 3}

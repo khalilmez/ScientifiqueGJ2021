@@ -5849,7 +5849,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8b32a90c10f5f84682e7790ffb11638, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questCell: {fileID: 11400000, guid: cd348c94f9da2da4c9527dba7dee01b4, type: 2}
+  questCell: {fileID: 0}
 --- !u!1 &2003288018375322040
 GameObject:
   m_ObjectHideFlags: 0
@@ -8689,7 +8689,7 @@ SpriteRenderer:
   m_SortingLayerID: -869579479
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: aa4455a63c962684f8e8f3de00bb6874, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fc54dcfe8489a5444ab02cfc5ad8ea71, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -11706,7 +11706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8b32a90c10f5f84682e7790ffb11638, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questCell: {fileID: 11400000, guid: cd348c94f9da2da4c9527dba7dee01b4, type: 2}
+  questCell: {fileID: 0}
 --- !u!1 &2003288019412889872
 GameObject:
   m_ObjectHideFlags: 0
