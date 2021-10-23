@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70ca7c3d3dbad2a43b2ba736c27d5872, type: 3}
-  m_Name: Choice
+  m_Name: AubergeRest
   m_EditorClassIdentifier: 
-  text: Banana
+  text: 'Get some rest : +2 vie -2 argent'
   conclusion: {fileID: 11400000, guid: 3053546f4f33ffe4ba7319a1cd2eb6cd, type: 2}
   bonusHealth: 2
-  bonusGold: 2
+  bonusGold: -2
