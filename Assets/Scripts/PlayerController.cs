@@ -30,6 +30,10 @@ public class PlayerController : MonoBehaviour
 		{
 			health = value;
 			HUDContent.SetHealth(health);
+            if (health <= 0)
+            {
+				Level.LevelState = LevelState.EndGame;
+            }
 		}
 	}
 	public int Stamina

@@ -94,7 +94,7 @@ public class Cell : MonoBehaviour
 			case CellType.Path:
 				break;
 			case CellType.Roma:
-				Level.ReloadLevel();
+				Level.LevelState = LevelState.EndGame;
 				break;
 			case CellType.Auberge:
 				break;

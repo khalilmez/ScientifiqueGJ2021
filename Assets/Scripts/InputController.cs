@@ -14,14 +14,24 @@ public class InputController : MonoBehaviour
 {
 	[SerializeField] private LayerMask cellMask;
 	[SerializeField] private Dependency<Camera> _camera;
+	[SerializeField] private GameObject pauseMenu;
 	private Camera cam => _camera.Resolve(this);
 
 	private RaycastHit hit;
 	private Ray ray;
+	private bool isPaused;
+	private void Awake()
+    {
+		isPaused = false;
+    }
 
-	private void Update()
+    private void Update()
 	{
-		if (Level.LevelState == LevelState.BoardPlaying && !QuestDisplay.Instance.IsActive)
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+			PauseGame();
+        }
+		if (Level.LevelState == LevelState.BoardPlaying && !QuestDisplay.Instance.IsActive && !isPaused)
 		{
 			// Left Click
 			if (Input.GetMouseButtonDown(0))
@@ -52,6 +62,19 @@ public class InputController : MonoBehaviour
 					Map.UnHoverAllCell();
 				}
 			}
+		}
+	}
+
+    public void PauseGame()
+	{
+		isPaused = !isPaused;
+		if (isPaused)
+		{
+			pauseMenu.SetActive(true);
+		}
+		else
+		{
+			pauseMenu.SetActive(false);
 		}
 	}
 }

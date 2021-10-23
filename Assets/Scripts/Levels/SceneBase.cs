@@ -124,7 +124,7 @@ namespace Tools
 #if UNITY_STANDALONE_OSX || UNITY_STANDALONE_WIN || UNITY_STANDALONE_LINUX || UNITY_EDITOR
 			if (Input.GetButtonDown("Quit"))
 			{
-				SceneLoader.QuitGame();
+				//SceneLoader.QuitGame();
 			}
 			if (Input.GetButtonDown("Mute"))
 			{

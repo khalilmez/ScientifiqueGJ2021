@@ -22,7 +22,9 @@ public class LevelController : SceneBase
 	public event LevelEventHandler OnChosingArchetype;
 	public event LevelEventHandler OnBoardPreparation;
 	public event LevelEventHandler OnBoardPlaying;
-
+	public event LevelEventHandler EndGame;
+	[SerializeField] GameObject WinMenu;
+	[SerializeField] GameObject LoseMenu;
 	private LevelState levelState;
 
 	public LevelState LevelState
@@ -45,6 +47,19 @@ public class LevelController : SceneBase
 				case LevelState.BoardPlaying:
 					OnBoardPlaying?.Invoke();
 					break;
+				case LevelState.EndGame:
+					{
+						if (Player.Health <= 0)
+						{
+							LoseMenu.SetActive(true);
+                        }
+                        else
+                        {
+							WinMenu.SetActive(true);
+                        }
+						EndGame?.Invoke();
+						break;
+					}
 			}
 		}
 	}
