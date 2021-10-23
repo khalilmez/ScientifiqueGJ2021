@@ -79,7 +79,7 @@ public class Cell : MonoBehaviour
 
 		spriteType.gameObject.SetActive(spriteType.sprite != null);
 
-
+		cellsToActivateByScroll = cellsToActivateByScroll.WithoutNullValues().ToList();
 		cellsToActivateByScroll.ForEach(x => x.gameObject.SetActive(false));
 	}
 

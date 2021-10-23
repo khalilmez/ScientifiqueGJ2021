@@ -175,6 +175,7 @@ MonoBehaviour:
   _spriteRenderer:
     _source: 2
     _localReference: {fileID: 0}
+  moveCellDuration: 0.8
   idleScaleXFactor: 0.9
   idleScaleYFactor: 1.05
   idleScaleDuration: 0.8

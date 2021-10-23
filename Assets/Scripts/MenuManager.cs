@@ -1,11 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Tools;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class MenuManager : MonoBehaviour
+
+public class MenuManager : SceneBase
 {
-    public void StartGame()
-    {
-        SceneManager.LoadScene("seb");
-    }
 }
