@@ -54,8 +54,6 @@ public class LevelController : SceneBase
 		base.Awake();
 		Instance = this;
 		LevelState = LevelState.Introduction;
-
-		OnBoardPreparation += BoardPreparation;
 	}
 
 	protected override void Start()
@@ -65,17 +63,6 @@ public class LevelController : SceneBase
 	}
 
 	private IEnumerator StartCore()
-	{
-		yield return new WaitForSeconds(0.5f);
-		LevelState = LevelState.BoardPlaying;
-	}
-
-	private void BoardPreparation()
-	{
-		StartCoroutine(BoardPreparationCore());
-	}
-
-	private IEnumerator BoardPreparationCore()
 	{
 		yield return new WaitForSeconds(0.5f);
 		LevelState = LevelState.BoardPlaying;
