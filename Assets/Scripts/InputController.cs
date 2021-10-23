@@ -21,7 +21,7 @@ public class InputController : MonoBehaviour
 
 	private void Update()
 	{
-		if (Level.LevelState == LevelState.BoardPlaying)
+		if (Level.LevelState == LevelState.BoardPlaying && !QuestDisplay.Instance.IsActive)
 		{
 			// Left Click
 			if (Input.GetMouseButtonDown(0))

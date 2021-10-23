@@ -16,8 +16,6 @@ public class Cell : MonoBehaviour
 	[SerializeField] private SpriteRenderer spriteSelection;
 	[SerializeField] private SpriteRenderer spriteHover;
 	[SerializeField] private SpriteRenderer spriteType;
-	[SerializeField] private Quest questCell;
-	[SerializeField] private GameObject questObject;
 
 	private bool isSelected;
 	private bool isHover;
@@ -60,12 +58,6 @@ public class Cell : MonoBehaviour
 					spriteType.sprite = Prefabs.romaDetails.spritesBuilding.Random();
 				}
 				break;
-			case CellType.DiaglogCell:
-				if (!Prefabs.romaDetails.spritesBuilding.IsEmpty())
-				{
-					spriteType.sprite = Prefabs.romaDetails.spritesBuilding.Random();
-				}
-				break;
 			default:
 				break;
 		}
@@ -77,23 +69,26 @@ public class Cell : MonoBehaviour
 	{
 		PlayEntranceSound();
 		ShowEntranceEffect();
+		OpenDialog();
 
 		switch (cellType)
 		{
-			case CellType.DiaglogCell:
-				questObject.GetComponent<QuestDisplay>().quest = questCell;
-				questObject.GetComponent<QuestDisplay>().Start();
-				questObject.SetActive(true);
-
-				break;
 			case CellType.Path:
-				// TODO: Play dialog
 				break;
 			case CellType.Roma:
 				Level.ReloadLevel();
 				break;
 			default:
 				break;
+		}
+	}
+
+	private void OpenDialog()
+	{
+		var dialog = GetComponent<CellDialog>();
+		if (dialog != null)
+		{
+			dialog.Show();
 		}
 	}
 
