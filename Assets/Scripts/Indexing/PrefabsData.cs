@@ -32,4 +32,6 @@ public sealed class PrefabsData : BaseIndex
 	[Header("Cell Type Details")]
 	public CellTypeDetails pathDetails;
 	public CellTypeDetails romaDetails;
+	public CellTypeDetails aubergeDetails;
+	public CellTypeDetails paperScrollDetails;
 }

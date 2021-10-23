@@ -12,12 +12,15 @@ public class Cell : MonoBehaviour
 {
 	[SerializeField] private CellType cellType;
 
+	[SerializeField] private List<Cell> cellsToActivateByScroll = new List<Cell>();
+
 	[Header("References")]
 	[SerializeField] private SpriteRenderer spriteSelection;
 	[SerializeField] private SpriteRenderer spriteHover;
 	[SerializeField] private SpriteRenderer spriteType;
 
 	private bool isSelected;
+	private bool scrollUsed;
 	private bool isHover;
 
 	public bool IsSelected
@@ -58,11 +61,26 @@ public class Cell : MonoBehaviour
 					spriteType.sprite = Prefabs.romaDetails.spritesBuilding.Random();
 				}
 				break;
+			case CellType.Auberge:
+				if (!Prefabs.aubergeDetails.spritesBuilding.IsEmpty())
+				{
+					spriteType.sprite = Prefabs.aubergeDetails.spritesBuilding.Random();
+				}
+				break;
+			case CellType.PaperScroll:
+				if (!Prefabs.paperScrollDetails.spritesBuilding.IsEmpty())
+				{
+					spriteType.sprite = Prefabs.paperScrollDetails.spritesBuilding.Random();
+				}
+				break;
 			default:
 				break;
 		}
 
 		spriteType.gameObject.SetActive(spriteType.sprite != null);
+
+
+		cellsToActivateByScroll.ForEach(x => x.gameObject.SetActive(false));
 	}
 
 	public void DoEntranceAction()
@@ -77,6 +95,12 @@ public class Cell : MonoBehaviour
 				break;
 			case CellType.Roma:
 				Level.ReloadLevel();
+				break;
+			case CellType.Auberge:
+				break;
+			case CellType.PaperScroll:
+				spriteType.gameObject.SetActive(false);
+				ActivateCellWithScroll();
 				break;
 			default:
 				break;
@@ -108,8 +132,34 @@ public class Cell : MonoBehaviour
 					Prefabs.romaDetails.audiosEntrance.Random().Play();
 				}
 				break;
+			case CellType.Auberge:
+				break;
+			case CellType.PaperScroll:
+
+				break;
 			default:
 				break;
+		}
+	}
+
+	private void ActivateCellWithScroll()
+	{
+		if (scrollUsed)
+			return;
+
+		scrollUsed = true;
+		StartCoroutine(ActivateCellWithScrollCore());
+	}
+
+	private IEnumerator ActivateCellWithScrollCore()
+	{
+		cellsToActivateByScroll = cellsToActivateByScroll.OrderBy(x => x.transform.position.x).ThenBy(x => x.transform.position.z).ToList();
+		foreach (var cell in cellsToActivateByScroll)
+		{
+			cell.transform.gameObject.SetActive(true);
+			cell.transform.localScale = Vector3.zero;
+			cell.transform.DOScale(Vector3.one, 0.2f).SetEase(Ease.OutBack);
+			yield return new WaitForSeconds(0.2f);
 		}
 	}
 

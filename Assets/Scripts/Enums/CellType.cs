@@ -2,5 +2,6 @@
 {
 	Path,
 	Auberge,
+	PaperScroll,
 	Roma
 }

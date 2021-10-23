@@ -12,6 +12,9 @@ public class PlayerController : MonoBehaviour
 	public static PlayerController Instance { get; private set; }
 
 	[SerializeField] private CharacterArchetype characterArchetype;
+	[SerializeField] private Dependency<SpriteRenderer> _spriteRenderer;
+
+	private SpriteRenderer spriteRenderer => _spriteRenderer.Resolve(this);
 
 	private Tween mover;
 	private int health;
@@ -82,12 +85,17 @@ public class PlayerController : MonoBehaviour
 		Health = characterArchetype.health.RandomValue;
 		Gold = characterArchetype.gold.RandomValue;
 
+		if (!characterArchetype.bodySprites.IsEmpty())
+		{
+			spriteRenderer.sprite = characterArchetype.bodySprites.Random();
+		}
+
 		ActiveCrossCells();
 
 		HUDContent.Show();
 	}
 
-	private void ActiveCrossCells()
+	public void ActiveCrossCells()
 	{
 		Map.ActiveCrossCells(transform.position);
 	}

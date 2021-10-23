@@ -21,3 +21,5 @@ MonoBehaviour:
   scholarDetails: {fileID: 11400000, guid: 124cb60875c931d44904297715b258a6, type: 2}
   pathDetails: {fileID: 11400000, guid: 39b6fdd308949fa43a590464f9ce9104, type: 2}
   romaDetails: {fileID: 11400000, guid: ebc99386fcd9425478590a0129b7d545, type: 2}
+  aubergeDetails: {fileID: 11400000, guid: cdbb5ab9568bb7946b9c40805aa90ac1, type: 2}
+  paperScrollDetails: {fileID: 11400000, guid: 5940da118c7521646aa2cf79f1365f35, type: 2}
