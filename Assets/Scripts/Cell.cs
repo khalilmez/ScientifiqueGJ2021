@@ -158,8 +158,8 @@ public class Cell : MonoBehaviour
 		{
 			cell.transform.gameObject.SetActive(true);
 			cell.transform.localScale = Vector3.zero;
-			cell.transform.DOScale(Vector3.one, 0.2f).SetEase(Ease.OutBack);
-			yield return new WaitForSeconds(0.2f);
+			cell.transform.DOScale(Vector3.one, Map.Config.cellActivationTiming).SetEase(Ease.OutBack);
+			yield return new WaitForSeconds(Map.Config.cellActivationTiming);
 		}
 	}
 

@@ -4,4 +4,9 @@ using UnityEngine;
 public class MapConfig : ScriptableObject
 {
 	public int healthConsumption = 1;
+
+	[Header("Cell")]
+	public float cellActivationTiming = 0.05f;
+
+
 }

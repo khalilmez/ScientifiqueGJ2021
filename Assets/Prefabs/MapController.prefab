@@ -13416,7 +13416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8b32a90c10f5f84682e7790ffb11638, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questCell: {fileID: 0}
+  questCell: {fileID: 11400000, guid: 28f2256cc1c008143a429207a9c62323, type: 2}
 --- !u!1 &2003288019412889872
 GameObject:
   m_ObjectHideFlags: 0
