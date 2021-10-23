@@ -11,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Cell
   - 
   - 
   - 
@@ -41,6 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Fader
+  - name: Cell
+    uniqueID: 3425387817
+    locked: 0
+  - name: Player
     uniqueID: 1476709903
+    locked: 0
+  - name: New Layer
+    uniqueID: 1812193347
     locked: 0

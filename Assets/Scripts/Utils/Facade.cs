@@ -6,4 +6,6 @@
 	public static TextFontConfig FontConfig => TextFontConfig.Instance;
 	public static PrefabsData Prefabs => PrefabsData.Instance;
 	public static SettingsData Settings => SettingsData.Instance;
+	public static MapController Map => MapController.Instance;
+	public static PlayerController Player => PlayerController.Instance;
 }
