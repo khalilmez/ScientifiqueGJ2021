@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Choice2
   m_EditorClassIdentifier: 
   text: Ananas
-  conclusion: {fileID: 11400000, guid: 623c1fa96e8a0d9408e942ca05d6a1f9, type: 2}
+  conclusion: {fileID: 0}
+  bonusHealth: 5
+  bonusGold: 5

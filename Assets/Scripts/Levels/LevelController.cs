@@ -67,7 +67,7 @@ public class LevelController : SceneBase
 	private IEnumerator StartCore()
 	{
 		yield return new WaitForSeconds(0.5f);
-		LevelState = LevelState.ChosingArchetype;
+		LevelState = LevelState.BoardPlaying;
 	}
 
 	private void BoardPreparation()

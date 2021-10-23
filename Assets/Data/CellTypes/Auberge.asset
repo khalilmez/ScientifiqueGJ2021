@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5dfb64fecee7b347b9c0697ae4266c9, type: 3}
-  m_Name: QuestTest
+  m_Name: Auberge
   m_EditorClassIdentifier: 
-  quests:
-  - {fileID: 11400000, guid: cd348c94f9da2da4c9527dba7dee01b4, type: 2}
-  spritesBuilding: []
+  quests: []
+  spritesBuilding:
+  - {fileID: -5823509660116927629, guid: d73f967faa978cf4e84a6d4e1aff4ef6, type: 3}
   audiosEntrance: []
   entranceEffects:
   - {fileID: 2433878528894686170, guid: bf4f16fefbe0f67449962e9bb884fed7, type: 3}

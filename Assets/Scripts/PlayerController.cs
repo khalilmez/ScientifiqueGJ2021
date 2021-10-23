@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
 {
 	public static PlayerController Instance { get; private set; }
 
+	[SerializeField] private CharacterArchetype characterArchetype;
+
 	private Tween mover;
 	private int health;
 	private int stamina;
@@ -21,7 +23,7 @@ public class PlayerController : MonoBehaviour
 	public int Health
 	{
 		get => health;
-		private set
+		set
 		{
 			health = value;
 			HUDContent.SetHealth(health);
@@ -30,7 +32,7 @@ public class PlayerController : MonoBehaviour
 	public int Stamina
 	{
 		get => stamina;
-		private set
+		set
 		{
 			stamina = value;
 			HUDContent.SetStamina(stamina);
@@ -39,7 +41,7 @@ public class PlayerController : MonoBehaviour
 	public int Force
 	{
 		get => force;
-		private set
+		set
 		{
 			force = value;
 			HUDContent.SetForce(force);
@@ -48,7 +50,7 @@ public class PlayerController : MonoBehaviour
 	public int Culture
 	{
 		get => culture;
-		private set
+		set
 		{
 			culture = value;
 			HUDContent.SetCulture(culture);
@@ -57,7 +59,7 @@ public class PlayerController : MonoBehaviour
 	public int Gold
 	{
 		get => gold;
-		private set
+		set
 		{
 			gold = value;
 			HUDContent.SetGold(gold);
@@ -68,11 +70,17 @@ public class PlayerController : MonoBehaviour
 
 	public void Init()
 	{
-		Health = Archetype.ArchetypeChoosen.Health;
-		Stamina = Archetype.ArchetypeChoosen.Stamina;
-		Force = Archetype.ArchetypeChoosen.Force;
-		Culture = Archetype.ArchetypeChoosen.Culture;
-		Gold = Archetype.ArchetypeChoosen.Gold;
+		//if (Archetype.ArchetypeChoosen != null)
+		//{
+		//	Health = Archetype.ArchetypeChoosen.Health;
+		//	Stamina = Archetype.ArchetypeChoosen.Stamina;
+		//	Force = Archetype.ArchetypeChoosen.Force;
+		//	Culture = Archetype.ArchetypeChoosen.Culture;
+		//	Gold = Archetype.ArchetypeChoosen.Gold;
+		//}
+
+		Health = characterArchetype.health.RandomValue;
+		Gold = characterArchetype.gold.RandomValue;
 
 		ActiveCrossCells();
 
@@ -102,7 +110,7 @@ public class PlayerController : MonoBehaviour
 
 		cell.DoEntranceAction();
 
-		Stamina -= Map.Config.staminaConsumption;
+		Health -= Map.Config.healthConsumption;
 
 		ActiveCrossCells();
 	}

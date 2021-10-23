@@ -13,4 +13,8 @@ public class Choice : ScriptableObject
 	public string text;
 	// Bonuses
 	public Quest conclusion;
+
+	[Space]
+	public int bonusHealth;
+	public int bonusGold;
 }

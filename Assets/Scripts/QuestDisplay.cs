@@ -4,6 +4,8 @@ using TMPro;
 using Tools;
 using UnityEngine;
 using UnityEngine.UI;
+using static Facade;
+
 public class QuestDisplay : MonoBehaviour
 {
 	public static QuestDisplay Instance { get; private set; }
@@ -61,8 +63,22 @@ public class QuestDisplay : MonoBehaviour
 		else
 		{
 			Toggle toggle = choicesList.GetComponent<ToggleGroup>().ActiveToggles().RandomOrDefault();
-			quest = choicesDictionary[toggle.name].conclusion;
-			Init();
+
+			Player.Health += choicesDictionary[toggle.name].bonusHealth;
+			Player.Gold += choicesDictionary[toggle.name].bonusGold;
+
+			if (!choicesDictionary.ContainsKey(toggle.name) || choicesDictionary[toggle.name].conclusion == null)
+			{
+				group.interactable = false;
+				group.alpha = 0f;
+			}
+			else
+			{
+				quest = choicesDictionary[toggle.name].conclusion;
+
+
+				Init();
+			}
 		}
 	}
 }

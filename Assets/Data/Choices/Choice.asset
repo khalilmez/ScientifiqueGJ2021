@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: Banana
   conclusion: {fileID: 11400000, guid: 3053546f4f33ffe4ba7319a1cd2eb6cd, type: 2}
+  bonusHealth: 2
+  bonusGold: 2
