@@ -14,8 +14,19 @@ public class CellDialog : MonoBehaviour
 {
 	[SerializeField] private Quest questCell;
 
+	private bool isAvailable;
+
+	private void Start()
+	{
+		isAvailable = true;
+	}
+
 	public void Show()
 	{
+		if (!isAvailable)
+			return;
+
+		isAvailable = false;
 		QuestDisplay.Instance.quest = questCell;
 		QuestDisplay.Instance.Init();
 	}
