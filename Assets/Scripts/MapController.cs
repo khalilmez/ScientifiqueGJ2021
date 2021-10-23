@@ -11,8 +11,10 @@ public class MapController : MonoBehaviour
 {
 	public static MapController Instance { get; private set; }
 
+	[SerializeField] private MapConfig config;
 	[SerializeField] private Cell playerSpawn;
 
+	public MapConfig Config => config;
 	public List<Cell> Cells { get; private set; } = new List<Cell>();
 
 	private void Awake()

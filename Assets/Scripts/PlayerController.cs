@@ -102,6 +102,8 @@ public class PlayerController : MonoBehaviour
 
 		cell.DoEntranceAction();
 
+		Stamina -= Map.Config.staminaConsumption;
+
 		ActiveCrossCells();
 	}
 }

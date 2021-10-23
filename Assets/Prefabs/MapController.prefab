@@ -73,6 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67f8766a0610a44409038bbd0dab8cfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  config: {fileID: 11400000, guid: 166c550b5c0dc824a984424b026aa74a, type: 2}
   playerSpawn: {fileID: 8215629832446380507}
 --- !u!1001 &7352002997293700988
 PrefabInstance:
