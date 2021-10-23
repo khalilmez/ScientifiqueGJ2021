@@ -12,6 +12,6 @@ public class Quest : ScriptableObject
 {
 	public string title;
 	public string description;
-	public Character character;
+	public DialogCharacter character;
 	public List<Choice> choices = new List<Choice>();
 }

@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 8490648864229005147, guid: ec204ed200b7a134a8d5f3ac89d5116c,
     type: 3}
+  pathDetails: {fileID: 11400000, guid: 39b6fdd308949fa43a590464f9ce9104, type: 2}
+  romaDetails: {fileID: 11400000, guid: ebc99386fcd9425478590a0129b7d545, type: 2}

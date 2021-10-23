@@ -19,5 +19,10 @@ public sealed class PrefabsData : BaseIndex
 	public static PrefabsData Instance => GetOrLoad(ref _instance);
 
 	// Set up your references below!
+	[Header("Prefabs")]
 	public PlayerController playerPrefab;
+
+	[Header("Cell Type Details")]
+	public CellTypeDetails pathDetails;
+	public CellTypeDetails romaDetails;
 }

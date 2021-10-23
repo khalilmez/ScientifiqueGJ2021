@@ -7,8 +7,8 @@ using Tools.Utils;
 using UnityEngine;
 using static Facade;
 
-[CreateAssetMenu(fileName = "Character", menuName = "Character", order = 1)]
-public class Character : ScriptableObject
+[CreateAssetMenu(fileName = "DialogCharacter", menuName = "DialogCharacter", order = 1)]
+public class DialogCharacter : ScriptableObject
 {
 	public string characterName;
 	public Sprite sprite;

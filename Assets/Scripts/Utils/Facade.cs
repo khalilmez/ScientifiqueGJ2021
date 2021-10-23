@@ -8,4 +8,5 @@
 	public static SettingsData Settings => SettingsData.Instance;
 	public static MapController Map => MapController.Instance;
 	public static PlayerController Player => PlayerController.Instance;
+	public static HUD HUDContent => HUD.Instance;
 }

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d3b242f6fa922a44a5e16facda35555, type: 3}
+  m_Name: Scholar
+  m_EditorClassIdentifier: 
+  names:
+  - Henry
+  health:
+    min: 13
+    max: 18
+  stamina:
+    min: 9
+    max: 14
+  force:
+    min: 5
+    max: 10
+  culture:
+    min: 20
+    max: 25
+  gold:
+    min: 15
+    max: 20
