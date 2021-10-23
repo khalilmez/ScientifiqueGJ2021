@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b8b58b40b8f18e4cb60dadfc081e65a, type: 3}
-  m_Name: Auberge
+  m_Name: "Monast\xE8re"
   m_EditorClassIdentifier: 
-  title: Taverne
-  description: Une auberge accueillante vous ouvre ses portes
+  title: "Monast\xE8re"
+  description: Les moines du 18eme siecle BLABLA infos sur les moines
   character: {fileID: 11400000, guid: 561da9a8bd527e44babbbb0281fece26, type: 2}
   choices:
   - {fileID: 11400000, guid: ce7ad079cec55c140a4a77a93c42cdf7, type: 2}

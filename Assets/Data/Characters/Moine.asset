@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70ca7c3d3dbad2a43b2ba736c27d5872, type: 3}
-  m_Name: AubergeSell
+  m_Script: {fileID: 11500000, guid: 44c1285ea9204a846a7339b33faccb86, type: 3}
+  m_Name: Moine
   m_EditorClassIdentifier: 
-  text: 'Vendez votre inventaire : +3 argent'
-  conclusion: {fileID: 0}
-  bonusHealth: 0
-  bonusGold: 3
+  characterName: St Marcelin
+  sprite: {fileID: 0}

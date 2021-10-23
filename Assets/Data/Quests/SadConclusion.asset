@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b8b58b40b8f18e4cb60dadfc081e65a, type: 3}
   m_Name: SadConclusion
   m_EditorClassIdentifier: 
-  title: You lost :(
-  description: Try again !
-  character: {fileID: 0}
+  title: BRIGANDS
+  description: "Ils courent un peu plus vite que pr\xE9vu..."
+  character: {fileID: 11400000, guid: 561da9a8bd527e44babbbb0281fece26, type: 2}
   choices: []
