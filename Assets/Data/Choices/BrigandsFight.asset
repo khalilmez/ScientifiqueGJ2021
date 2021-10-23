@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70ca7c3d3dbad2a43b2ba736c27d5872, type: 3}
   m_Name: BrigandsFight
   m_EditorClassIdentifier: 
-  text: Sauve qui peut !
+  text: Il faudra me passer sur le corps !
   conclusion: {fileID: 11400000, guid: 623c1fa96e8a0d9408e942ca05d6a1f9, type: 2}
   bonusHealth: -5
   bonusGold: 0

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quests: []
   spritesBuilding:
-  - {fileID: -4710266166019281759, guid: d73f967faa978cf4e84a6d4e1aff4ef6, type: 3}
+  - {fileID: -2806012975131580994, guid: d73f967faa978cf4e84a6d4e1aff4ef6, type: 3}
   audiosEntrance: []
   entranceEffects:
   - {fileID: 2433878528894686170, guid: bf4f16fefbe0f67449962e9bb884fed7, type: 3}

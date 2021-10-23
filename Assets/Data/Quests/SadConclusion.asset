@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: SadConclusion
   m_EditorClassIdentifier: 
   title: BRIGANDS
-  description: "Vous ne savez pas vous battre en r\xE9alit\xE9."
+  description: "Et ils pass\xE8rent sur votre corps : -5 Vie"
   character: {fileID: 11400000, guid: 08522f057c80c2043a354078e7d778a0, type: 2}
   choices: []

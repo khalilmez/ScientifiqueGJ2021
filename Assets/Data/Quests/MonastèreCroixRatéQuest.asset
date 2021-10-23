@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: "Monast\xE8reCroixRat\xE9Quest"
   m_EditorClassIdentifier: 
   title: MONASTERE
-  description: Un parpaillot ! Appelez l'inquisition !
+  description: Un parpaillot ! Appelez l'inquisition ! -5 Vie
   character: {fileID: 11400000, guid: 561da9a8bd527e44babbbb0281fece26, type: 2}
-  choices:
-  - {fileID: 11400000, guid: 07ca485d0372a4a47bd5d2ebd650725a, type: 2}
+  choices: []

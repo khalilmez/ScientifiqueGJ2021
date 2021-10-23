@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70ca7c3d3dbad2a43b2ba736c27d5872, type: 3}
   m_Name: AubergeRest
   m_EditorClassIdentifier: 
-  text: "voici quelques sequins sonnants et tr\xE9buchants pour ta peine, aubergiste
+  text: "Voici quelques sequins sonnants et tr\xE9buchants pour ta peine, aubergiste
     ! - 2 Argent, + 2 sant\xE9"
   conclusion: {fileID: 0}
   bonusHealth: 2

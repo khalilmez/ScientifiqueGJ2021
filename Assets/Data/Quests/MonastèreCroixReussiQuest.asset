@@ -15,5 +15,4 @@ MonoBehaviour:
   title: MONASTERE
   description: "Que le patron des voyageurs vous b\xE9nisse mon brave"
   character: {fileID: 11400000, guid: 561da9a8bd527e44babbbb0281fece26, type: 2}
-  choices:
-  - {fileID: 11400000, guid: 018cc5c869a966141b8a3157ef6b4a15, type: 2}
+  choices: []
