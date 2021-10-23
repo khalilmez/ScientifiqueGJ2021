@@ -666,6 +666,26 @@ MonoBehaviour:
   - {fileID: 2003288018803874118}
   - {fileID: 2003288017874837983}
   - {fileID: 2003288018293551640}
+  - {fileID: 2003288018994755336}
+  - {fileID: 2003288018847309044}
+  - {fileID: 2003288017396880752}
+  - {fileID: 2003288018607300191}
+  - {fileID: 2003288019334949455}
+  - {fileID: 2003288017589571896}
+  - {fileID: 2003288019412889886}
+  - {fileID: 2003288017599379454}
+  - {fileID: 2003288018652481648}
+  - {fileID: 2003288018889925079}
+  - {fileID: 2003288017467410350}
+  - {fileID: 2003288017596614823}
+  - {fileID: 2003288018581547138}
+  - {fileID: 2003288019193859925}
+  - {fileID: 2003288018366507280}
+  - {fileID: 2003288017624022950}
+  - {fileID: 2003288018032721323}
+  - {fileID: 2003288017732948900}
+  - {fileID: 2003288019387666490}
+  - {fileID: 2003288019125879212}
   spriteSelection: {fileID: 2003288018814343165}
   spriteHover: {fileID: 2003288019263984463}
   spriteType: {fileID: 2003288018228092395}
@@ -1238,6 +1258,7 @@ GameObject:
   - component: {fileID: 2003288017466425855}
   - component: {fileID: 2003288017466425840}
   - component: {fileID: 2003288017466425841}
+  - component: {fileID: 505536697}
   m_Layer: 6
   m_Name: (0, 1)
   m_TagString: Untagged
@@ -1304,7 +1325,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.45697054, g: 1, b: 0.28773582, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1339,11 +1360,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c58ce4d14c58c304599c046483c4243d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cellType: 0
+  cellType: 1
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 2003288018644432776}
   spriteHover: {fileID: 2003288018578995538}
   spriteType: {fileID: 2003288019033665970}
+--- !u!114 &505536697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003288017466425843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b32a90c10f5f84682e7790ffb11638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questCell: {fileID: 11400000, guid: 6005c4ccc6794ef448830d2b2eef161c, type: 2}
 --- !u!1 &2003288017467410336
 GameObject:
   m_ObjectHideFlags: 0
@@ -2340,6 +2374,7 @@ GameObject:
   - component: {fileID: 2003288017599379452}
   - component: {fileID: 2003288017599379453}
   - component: {fileID: 2003288017599379454}
+  - component: {fileID: 369972924}
   m_Layer: 6
   m_Name: (1, 5)
   m_TagString: Untagged
@@ -2406,7 +2441,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2446,6 +2481,19 @@ MonoBehaviour:
   spriteSelection: {fileID: 2003288019284750161}
   spriteHover: {fileID: 2003288017350221551}
   spriteType: {fileID: 2003288018954228116}
+--- !u!114 &369972924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003288017599379440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b32a90c10f5f84682e7790ffb11638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questCell: {fileID: 11400000, guid: b4c54ca21c88ed04da00398889bf1f12, type: 2}
 --- !u!1 &2003288017605052901
 GameObject:
   m_ObjectHideFlags: 0
@@ -2690,7 +2738,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4,
     type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2725,7 +2773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c58ce4d14c58c304599c046483c4243d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cellType: 3
+  cellType: 0
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 2003288019269634148}
   spriteHover: {fileID: 2003288019168339660}
@@ -3790,6 +3838,7 @@ GameObject:
   - component: {fileID: 2003288017874837981}
   - component: {fileID: 2003288017874837982}
   - component: {fileID: 2003288017874837983}
+  - component: {fileID: 972685467}
   m_Layer: 6
   m_Name: (2, 2)
   m_TagString: Untagged
@@ -3856,7 +3905,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3896,6 +3945,19 @@ MonoBehaviour:
   spriteSelection: {fileID: 2003288018590168219}
   spriteHover: {fileID: 2003288017616334318}
   spriteType: {fileID: 2003288018831854368}
+--- !u!114 &972685467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003288017874837969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b32a90c10f5f84682e7790ffb11638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questCell: {fileID: 11400000, guid: b4c54ca21c88ed04da00398889bf1f12, type: 2}
 --- !u!1 &2003288017891731508
 GameObject:
   m_ObjectHideFlags: 0
@@ -4359,6 +4421,7 @@ GameObject:
   - component: {fileID: 2003288018032721321}
   - component: {fileID: 2003288018032721322}
   - component: {fileID: 2003288018032721323}
+  - component: {fileID: 811670767}
   m_Layer: 6
   m_Name: (5, 5)
   m_TagString: Untagged
@@ -4425,7 +4488,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8490566, g: 0.8490566, b: 0.8490566, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4465,6 +4528,19 @@ MonoBehaviour:
   spriteSelection: {fileID: 2003288017445984103}
   spriteHover: {fileID: 2003288017605052899}
   spriteType: {fileID: 2003288018801255192}
+--- !u!114 &811670767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003288018032721325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b32a90c10f5f84682e7790ffb11638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questCell: {fileID: 11400000, guid: b4c54ca21c88ed04da00398889bf1f12, type: 2}
 --- !u!1 &2003288018058773701
 GameObject:
   m_ObjectHideFlags: 0
@@ -5390,6 +5466,7 @@ GameObject:
   - component: {fileID: 2003288018293551654}
   - component: {fileID: 2003288018293551655}
   - component: {fileID: 2003288018293551640}
+  - component: {fileID: 552407906}
   m_Layer: 6
   m_Name: (3, 2)
   m_TagString: Untagged
@@ -5456,7 +5533,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.3094227, g: 1, b: 0.24056602, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5496,6 +5573,19 @@ MonoBehaviour:
   spriteSelection: {fileID: 2003288018446477602}
   spriteHover: {fileID: 2003288018850005752}
   spriteType: {fileID: 2003288018692431711}
+--- !u!114 &552407906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003288018293551642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b32a90c10f5f84682e7790ffb11638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questCell: {fileID: 11400000, guid: 6005c4ccc6794ef448830d2b2eef161c, type: 2}
 --- !u!1 &2003288018366507282
 GameObject:
   m_ObjectHideFlags: 0
@@ -5508,6 +5598,7 @@ GameObject:
   - component: {fileID: 2003288018366507294}
   - component: {fileID: 2003288018366507295}
   - component: {fileID: 2003288018366507280}
+  - component: {fileID: 608946266}
   m_Layer: 6
   m_Name: (4, 5)
   m_TagString: Untagged
@@ -5574,7 +5665,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8773585, g: 0.8773585, b: 0.8773585, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5614,6 +5705,19 @@ MonoBehaviour:
   spriteSelection: {fileID: 2003288019306782792}
   spriteHover: {fileID: 2003288019109960696}
   spriteType: {fileID: 2003288018217472065}
+--- !u!114 &608946266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003288018366507282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b32a90c10f5f84682e7790ffb11638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questCell: {fileID: 11400000, guid: b4c54ca21c88ed04da00398889bf1f12, type: 2}
 --- !u!1 &2003288018370777888
 GameObject:
   m_ObjectHideFlags: 0
@@ -5728,7 +5832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c58ce4d14c58c304599c046483c4243d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cellType: 0
+  cellType: 1
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 2003288018843312740}
   spriteHover: {fileID: 2003288018463250494}
@@ -6536,7 +6640,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: db750325989564987a34393247d883b4,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6571,7 +6675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c58ce4d14c58c304599c046483c4243d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cellType: 0
+  cellType: 3
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 2003288018694508096}
   spriteHover: {fileID: 2003288017547907056}
@@ -10578,7 +10682,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cellType: 0
-  cellsToActivateByScroll: []
+  cellsToActivateByScroll:
+  - {fileID: 2003288017624022950}
   spriteSelection: {fileID: 2003288018121501499}
   spriteHover: {fileID: 2003288017648188078}
   spriteType: {fileID: 2003288018451634774}
@@ -11585,7 +11690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c58ce4d14c58c304599c046483c4243d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cellType: 0
+  cellType: 1
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 2003288017666286272}
   spriteHover: {fileID: 2003288018893595711}
