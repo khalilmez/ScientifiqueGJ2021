@@ -12,8 +12,18 @@ public class PlayerController : MonoBehaviour
 	public static PlayerController Instance { get; private set; }
 
 	[SerializeField] private CharacterArchetype characterArchetype;
+	[SerializeField] private Transform bodyHolder;
 	[SerializeField] private Dependency<SpriteRenderer> _spriteRenderer;
-	public Animator animator;
+
+	[Header("Moving Animation")]
+	[SerializeField] private float moveCellDuration = 0.8f;
+
+	[Header("Idle Animation")]
+	[SerializeField] private float idleScaleXFactor = 0.9f;
+	[SerializeField] private float idleScaleYFactor = 1.1f;
+	[SerializeField] private float idleScaleDuration = 0.5f;
+	[SerializeField] private Ease idleScaleEase = Ease.InOutSine;
+
 	private SpriteRenderer spriteRenderer => _spriteRenderer.Resolve(this);
 
 	private Tween mover;
@@ -30,10 +40,10 @@ public class PlayerController : MonoBehaviour
 		{
 			health = value;
 			HUDContent.SetHealth(health);
-            if (health <= 0)
-            {
+			if (health <= 0)
+			{
 				Level.LevelState = LevelState.EndGame;
-            }
+			}
 		}
 	}
 	public int Stamina
@@ -85,7 +95,6 @@ public class PlayerController : MonoBehaviour
 		//	Culture = Archetype.ArchetypeChoosen.Culture;
 		//	Gold = Archetype.ArchetypeChoosen.Gold;
 		//}
-		animator = GetComponentInChildren<Animator>();
 		Health = characterArchetype.health.RandomValue;
 		Gold = characterArchetype.gold.RandomValue;
 
@@ -95,8 +104,8 @@ public class PlayerController : MonoBehaviour
 		}
 
 		ActiveCrossCells();
-
 		HUDContent.Show();
+		PlayIdleAnimation();
 	}
 
 	public void ActiveCrossCells()
@@ -104,13 +113,12 @@ public class PlayerController : MonoBehaviour
 		Map.ActiveCrossCells(transform.position);
 	}
 
-	public void Move(Cell cell, float duration = 1f)
+	public void Move(Cell cell)
 	{
 		if (!cell.IsSelected)
 			return;
-		animator.SetBool("IsMoving", true);
-		Debug.Log("Started Moving");
-		StartCoroutine(MoveCore(cell, duration));
+
+		StartCoroutine(MoveCore(cell, moveCellDuration));
 	}
 
 	private IEnumerator MoveCore(Cell cell, float duration)
@@ -124,9 +132,21 @@ public class PlayerController : MonoBehaviour
 		cell.DoEntranceAction();
 
 		Health -= Map.Config.healthConsumption;
-		animator.SetBool("IsMoving", false);
-		Debug.Log("Finished Moving");
 
 		ActiveCrossCells();
+	}
+
+	private void PlayIdleAnimation()
+	{
+		bodyHolder.DOKill();
+		bodyHolder.DOScaleX(idleScaleXFactor, idleScaleDuration).SetEase(idleScaleEase).SetLoops(-1, LoopType.Yoyo);
+		bodyHolder.DOScaleY(idleScaleYFactor, idleScaleDuration).SetEase(idleScaleEase).SetLoops(-1, LoopType.Yoyo);
+	}
+
+	private void PlayWalkingAnimation()
+	{
+		bodyHolder.DOKill();
+		bodyHolder.DOScaleX(idleScaleXFactor, idleScaleDuration).SetEase(idleScaleEase).SetLoops(-1, LoopType.Yoyo);
+		bodyHolder.DOScaleY(idleScaleYFactor, idleScaleDuration).SetEase(idleScaleEase).SetLoops(-1, LoopType.Yoyo);
 	}
 }

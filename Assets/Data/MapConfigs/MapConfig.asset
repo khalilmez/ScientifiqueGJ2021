@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ca3b46d54a858b43acabf8aca10cdc7, type: 3}
   m_Name: MapConfig
   m_EditorClassIdentifier: 
-  staminaConsumption: 1
+  healthConsumption: 1
+  cellActivationTiming: 0.1
