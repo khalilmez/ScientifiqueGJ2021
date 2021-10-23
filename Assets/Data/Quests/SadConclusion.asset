@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: SadConclusion
   m_EditorClassIdentifier: 
   title: BRIGANDS
-  description: "Ils courent un peu plus vite que pr\xE9vu..."
-  character: {fileID: 11400000, guid: 561da9a8bd527e44babbbb0281fece26, type: 2}
+  description: "Vous ne savez pas vous battre en r\xE9alit\xE9."
+  character: {fileID: 11400000, guid: 08522f057c80c2043a354078e7d778a0, type: 2}
   choices: []

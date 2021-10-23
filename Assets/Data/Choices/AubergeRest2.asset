@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70ca7c3d3dbad2a43b2ba736c27d5872, type: 3}
-  m_Name: AubergeSell
+  m_Name: AubergeRest2
   m_EditorClassIdentifier: 
-  text: "Je puis divertir vos h\xF4tes si vous vouliez bien me c\xE9der une paillasse
-    dans vos \xE9curies : +3 argent"
+  text: "seriez-vous assez charitable pour m'h\xE9berger mon brave ? +2 Vie, -3 Argent"
   conclusion: {fileID: 0}
-  bonusHealth: 0
-  bonusGold: 3
+  bonusHealth: 2
+  bonusGold: -3

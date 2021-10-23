@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5dfb64fecee7b347b9c0697ae4266c9, type: 3}
+  m_Name: Brigands
+  m_EditorClassIdentifier: 
+  quests: []
+  spritesBuilding:
+  - {fileID: -666029461122602693, guid: d73f967faa978cf4e84a6d4e1aff4ef6, type: 3}
+  audiosEntrance: []
+  entranceEffects:
+  - {fileID: 2433878528894686170, guid: bf4f16fefbe0f67449962e9bb884fed7, type: 3}

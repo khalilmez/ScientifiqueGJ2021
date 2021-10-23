@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b8b58b40b8f18e4cb60dadfc081e65a, type: 3}
-  m_Name: Brigands
+  m_Name: "Monast\xE8reCroixRat\xE9Quest"
   m_EditorClassIdentifier: 
-  title: BRIGANDS !
-  description: La bourse ou la vie !
-  character: {fileID: 11400000, guid: 08522f057c80c2043a354078e7d778a0, type: 2}
+  title: MONASTERE
+  description: "Un parpaillot ! au b\xFBcher !"
+  character: {fileID: 11400000, guid: 561da9a8bd527e44babbbb0281fece26, type: 2}
   choices:
-  - {fileID: 11400000, guid: 5fb852635bc183d4a83a23d249989339, type: 2}
-  - {fileID: 11400000, guid: 685e966e9d53cc64faf37e632cc9e257, type: 2}
+  - {fileID: 11400000, guid: 07ca485d0372a4a47bd5d2ebd650725a, type: 2}

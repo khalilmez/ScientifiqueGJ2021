@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b8b58b40b8f18e4cb60dadfc081e65a, type: 3}
   m_Name: "Monast\xE8re"
   m_EditorClassIdentifier: 
-  title: "Monast\xE8re"
-  description: Les moines du 18eme siecle BLABLA infos sur les moines
+  title: MONASTERE
+  description: Mon fils, le Seigneur vous ait en sa bonne garde ! Que puis-je pour
+    ton service ?
   character: {fileID: 11400000, guid: 561da9a8bd527e44babbbb0281fece26, type: 2}
   choices:
-  - {fileID: 11400000, guid: ce7ad079cec55c140a4a77a93c42cdf7, type: 2}
-  - {fileID: 11400000, guid: 29cbcb81c756ec5438b96922d9cf9862, type: 2}
+  - {fileID: 11400000, guid: 1602b29fdee932c4bb3352774470e722, type: 2}
+  - {fileID: 11400000, guid: 1ebc3e34b109232499a3e99315c6f128, type: 2}

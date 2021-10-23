@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70ca7c3d3dbad2a43b2ba736c27d5872, type: 3}
-  m_Name: AubergeSell
+  m_Name: "Monast\xE8reCroixReussi"
   m_EditorClassIdentifier: 
-  text: "Je puis divertir vos h\xF4tes si vous vouliez bien me c\xE9der une paillasse
-    dans vos \xE9curies : +3 argent"
+  text: Vers la gauche ?
   conclusion: {fileID: 0}
   bonusHealth: 0
-  bonusGold: 3
+  bonusGold: 0

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70ca7c3d3dbad2a43b2ba736c27d5872, type: 3}
   m_Name: "Monast\xE8reDon"
   m_EditorClassIdentifier: 
-  text: "Acceptez l'hospitalit\xE9"
+  text: Offrez-moi l'asile pour la nuit
   conclusion: {fileID: 0}
-  bonusHealth: 5
+  bonusHealth: 2
   bonusGold: 0

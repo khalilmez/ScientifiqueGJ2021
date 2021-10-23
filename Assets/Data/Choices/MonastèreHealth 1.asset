@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70ca7c3d3dbad2a43b2ba736c27d5872, type: 3}
-  m_Name: "Monast\xE8reHealth"
+  m_Name: "Monast\xE8reHealth 1"
   m_EditorClassIdentifier: 
-  text: "Acceptez l'hospitalit\xE9"
-  conclusion: {fileID: 0}
+  text: 'Je souhaiterais me recueillir devant les reliques de Saint Christophe :
+    +5 Vie'
+  conclusion: {fileID: 11400000, guid: 35e1d2992dc0bb440b4af3ae1f09de25, type: 2}
   bonusHealth: 5
   bonusGold: 0
