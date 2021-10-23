@@ -52,11 +52,11 @@ public class LevelController : SceneBase
 						if (Player.Health <= 0)
 						{
 							LoseMenu.SetActive(true);
-                        }
-                        else
-                        {
+						}
+						else
+						{
 							WinMenu.SetActive(true);
-                        }
+						}
 						EndGame?.Invoke();
 						break;
 					}

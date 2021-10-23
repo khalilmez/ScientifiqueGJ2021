@@ -265,7 +265,7 @@ namespace Tools
 
 				content: () =>
 				{
-					SceneLoader.LoadScene(Constants.MENU_SCENE);
+					SceneLoader.LoadScene("0-Menu");
 				}));
 			}
 		}
