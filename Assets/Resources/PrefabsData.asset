@@ -14,5 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 8490648864229005147, guid: ec204ed200b7a134a8d5f3ac89d5116c,
     type: 3}
+  aristocratDetails: {fileID: 11400000, guid: 49c89c7f0c83ffd42ae033d452746413, type: 2}
+  companionDetails: {fileID: 11400000, guid: 2c2b84f336e21fe4996d61a97dca90dc, type: 2}
+  merchantDetails: {fileID: 11400000, guid: 1922a1e9fb5ddb649bd2173ef7cd8a21, type: 2}
+  priestDetails: {fileID: 11400000, guid: 95d8e65dc6de29744881b79719aa8ec4, type: 2}
+  scholarDetails: {fileID: 11400000, guid: 124cb60875c931d44904297715b258a6, type: 2}
   pathDetails: {fileID: 11400000, guid: 39b6fdd308949fa43a590464f9ce9104, type: 2}
   romaDetails: {fileID: 11400000, guid: ebc99386fcd9425478590a0129b7d545, type: 2}

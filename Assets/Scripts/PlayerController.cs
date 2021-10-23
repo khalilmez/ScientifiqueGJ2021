@@ -66,9 +66,17 @@ public class PlayerController : MonoBehaviour
 
 	private void Awake() => Instance = this;
 
-	private void Start()
+	public void Init()
 	{
+		Health = Archetype.ArchetypeChoosen.Health;
+		Stamina = Archetype.ArchetypeChoosen.Stamina;
+		Force = Archetype.ArchetypeChoosen.Force;
+		Culture = Archetype.ArchetypeChoosen.Culture;
+		Gold = Archetype.ArchetypeChoosen.Gold;
+
 		ActiveCrossCells();
+
+		HUDContent.Show();
 	}
 
 	private void ActiveCrossCells()

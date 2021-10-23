@@ -18,11 +18,16 @@ public class MapController : MonoBehaviour
 	private void Awake()
 	{
 		Instance = this;
+		Level.OnBoardPlaying += SpawnPlayer;
 
 		Cells = FindObjectsOfType<Cell>().ToList();
+	}
 
+	private void SpawnPlayer()
+	{
 		var player = Instantiate(Prefabs.playerPrefab);
 		player.transform.position = playerSpawn.transform.position;
+		player.Init();
 	}
 
 	public void UnSelectAllCell()

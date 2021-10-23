@@ -1,6 +1,7 @@
-﻿public enum LevelState
+public enum LevelState
 {
-	Play,
-	GameOver,
-	Pause
+	Introduction,
+	ChosingArchetype,
+	BoardPreparation,
+	BoardPlaying
 }

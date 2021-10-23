@@ -21,11 +21,11 @@ namespace Tools
 		public const string MUSIC_VOLUME = "musicVolume";
 		public const string MUSIC_LOWPASS = "musicLowPass";
 
-		public delegate void LevelEventHandler();
+		public delegate void SceneEventHandler();
 
-		public event LevelEventHandler OnStart;
-		public event LevelEventHandler OnGameOver;
-		public event LevelEventHandler OnPause;
+		public event SceneEventHandler OnStart;
+		public event SceneEventHandler OnGameOver;
+		public event SceneEventHandler OnPause;
 
 		[Header("Audio")]
 		[SerializeField] protected AudioClip music;
@@ -38,7 +38,7 @@ namespace Tools
 		[SerializeField] protected AudioMixer mixer;
 		[SerializeField] protected Material transition;
 
-		protected LevelState state;
+		protected SceneState state;
 		protected float masterVolume;
 		protected float musicVolume;
 		protected float musicLowPass;
@@ -54,7 +54,7 @@ namespace Tools
 		protected Vignette vignette;
 		protected ChromaticAberration chromatic;
 
-		public LevelState State
+		public SceneState SceneState
 		{
 			get => state;
 			set
@@ -63,15 +63,15 @@ namespace Tools
 
 				switch (value)
 				{
-					case LevelState.Play:
+					case SceneState.Play:
 						OnStart?.Invoke();
 						break;
 
-					case LevelState.GameOver:
+					case SceneState.GameOver:
 						OnGameOver?.Invoke();
 						break;
 
-					case LevelState.Pause:
+					case SceneState.Pause:
 						OnPause?.Invoke();
 						break;
 				}
@@ -115,7 +115,7 @@ namespace Tools
 
 			Music.TryUpdateClip(music);
 
-			State = LevelState.Play;
+			SceneState = SceneState.Play;
 			fader.FadeIn();
 		}
 

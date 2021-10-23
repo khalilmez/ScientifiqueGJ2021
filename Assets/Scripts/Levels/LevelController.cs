@@ -17,15 +17,68 @@ public class LevelController : SceneBase
 {
 	public static LevelController Instance { get; private set; }
 
+	public delegate void LevelEventHandler();
+
+	public event LevelEventHandler OnChosingArchetype;
+	public event LevelEventHandler OnBoardPreparation;
+	public event LevelEventHandler OnBoardPlaying;
+
+	private LevelState levelState;
+
+	public LevelState LevelState
+	{
+		get => levelState;
+
+		set
+		{
+			levelState = value;
+			switch (levelState)
+			{
+				case LevelState.Introduction:
+					break;
+				case LevelState.ChosingArchetype:
+					OnChosingArchetype?.Invoke();
+					break;
+				case LevelState.BoardPreparation:
+					OnBoardPreparation?.Invoke();
+					break;
+				case LevelState.BoardPlaying:
+					OnBoardPlaying?.Invoke();
+					break;
+			}
+		}
+	}
+
 	protected override void Awake()
 	{
 		base.Awake();
 		Instance = this;
+		LevelState = LevelState.Introduction;
+
+		OnBoardPreparation += BoardPreparation;
 	}
 
 	protected override void Start()
 	{
 		base.Start();
+		StartCoroutine(StartCore());
+	}
+
+	private IEnumerator StartCore()
+	{
+		yield return new WaitForSeconds(0.5f);
+		LevelState = LevelState.ChosingArchetype;
+	}
+
+	private void BoardPreparation()
+	{
+		StartCoroutine(BoardPreparationCore());
+	}
+
+	private IEnumerator BoardPreparationCore()
+	{
+		yield return new WaitForSeconds(0.5f);
+		LevelState = LevelState.BoardPlaying;
 	}
 
 	protected override void Update()

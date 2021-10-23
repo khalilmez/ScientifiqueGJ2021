@@ -21,33 +21,36 @@ public class InputController : MonoBehaviour
 
 	private void Update()
 	{
-		// Left Click
-		if (Input.GetMouseButtonDown(0))
+		if (Level.LevelState == LevelState.BoardPlaying)
 		{
-			ray = cam.ScreenPointToRay(Input.mousePosition);
-			if (Physics.Raycast(ray, out hit, Mathf.Infinity, cellMask, QueryTriggerInteraction.Collide))
+			// Left Click
+			if (Input.GetMouseButtonDown(0))
 			{
-				if (hit.collider.TryGetComponent(out Cell cell))
+				ray = cam.ScreenPointToRay(Input.mousePosition);
+				if (Physics.Raycast(ray, out hit, Mathf.Infinity, cellMask, QueryTriggerInteraction.Collide))
 				{
-					Player.Move(cell);
-				}
-			}
-		}
-		else
-		{
-			// Mouse Hovering
-			ray = cam.ScreenPointToRay(Input.mousePosition);
-			if (Physics.Raycast(ray, out hit, Mathf.Infinity, cellMask, QueryTriggerInteraction.Collide))
-			{
-				if (hit.collider.TryGetComponent(out Cell cell))
-				{
-					Map.UnHoverAllCell();
-					cell.IsHover = true;
+					if (hit.collider.TryGetComponent(out Cell cell))
+					{
+						Player.Move(cell);
+					}
 				}
 			}
 			else
 			{
-				Map.UnHoverAllCell();
+				// Mouse Hovering
+				ray = cam.ScreenPointToRay(Input.mousePosition);
+				if (Physics.Raycast(ray, out hit, Mathf.Infinity, cellMask, QueryTriggerInteraction.Collide))
+				{
+					if (hit.collider.TryGetComponent(out Cell cell))
+					{
+						Map.UnHoverAllCell();
+						cell.IsHover = true;
+					}
+				}
+				else
+				{
+					Map.UnHoverAllCell();
+				}
 			}
 		}
 	}

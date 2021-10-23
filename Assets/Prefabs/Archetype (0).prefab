@@ -235,7 +235,7 @@ MonoBehaviour:
   forceText: {fileID: 6462246365491979489}
   cultureText: {fileID: 6462246364686461404}
   goldText: {fileID: 6462246366116231655}
-  body: {fileID: 6462246365198789231}
+  bodyImage: {fileID: 6462246365198789231}
   _archetypeSelection:
     _source: 1
     _localReference: {fileID: 0}
@@ -1948,7 +1948,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6462246365967321088}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8026857392688993292}
+        m_TargetAssemblyTypeName: ArchetypeChoice, Assembly-CSharp
+        m_MethodName: Select
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6462246365987892611
 GameObject:
   m_ObjectHideFlags: 0

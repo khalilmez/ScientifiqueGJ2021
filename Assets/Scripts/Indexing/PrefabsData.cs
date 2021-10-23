@@ -22,6 +22,13 @@ public sealed class PrefabsData : BaseIndex
 	[Header("Prefabs")]
 	public PlayerController playerPrefab;
 
+	[Header("Character Archetype")]
+	public CharacterArchetype aristocratDetails;
+	public CharacterArchetype companionDetails;
+	public CharacterArchetype merchantDetails;
+	public CharacterArchetype priestDetails;
+	public CharacterArchetype scholarDetails;
+
 	[Header("Cell Type Details")]
 	public CellTypeDetails pathDetails;
 	public CellTypeDetails romaDetails;

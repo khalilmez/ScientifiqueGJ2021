@@ -6,8 +6,8 @@ using UnityEngine;
 public class CharacterArchetype : ScriptableObject
 {
 	public List<string> names = new List<string>();
-	public List<Sprite> bodySprite = new List<Sprite>();
-	public List<Sprite> portraitSprite = new List<Sprite>();
+	public List<Sprite> bodySprites = new List<Sprite>();
+	public List<Sprite> portraitSprites = new List<Sprite>();
 
 	[Header("Stats")]
 	[IntRangeSlider(0, 30)] public IntRange health = new IntRange(5, 10);

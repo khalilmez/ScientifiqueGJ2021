@@ -9,34 +9,59 @@ using static Facade;
 
 public class ArchetypeSelection : MonoBehaviour
 {
+	public static ArchetypeSelection Instance { get; private set; }
+
 	[SerializeField] private Dependency<CanvasGroup> _group;
 
-	private List<ArchetypeSlot> slots = new List<ArchetypeSlot>();
+	private List<ArchetypeChoice> slots = new List<ArchetypeChoice>();
+	private ArchetypeChoice archetypeChoosen;
 
 	private CanvasGroup group => _group.Resolve(this);
-
-	private void Start()
+	public ArchetypeChoice ArchetypeChoosen
 	{
-		List<CharacterArchetype> archetypes = new List<CharacterArchetype>();
-		//archetypes.Add(Prefabs.);
-
-		slots = GetComponentsInChildren<ArchetypeSlot>().ToList();
-		foreach (var slot in slots)
+		get => archetypeChoosen;
+		set
 		{
-			//var archetype =
+			archetypeChoosen = value;
+			Hide();
 		}
+	}
+
+	private void Awake()
+	{
+		Level.OnChosingArchetype += Show;
 	}
 
 	public void Show()
 	{
+		Init();
+
 		group.alpha = 0f;
 		group?.DOKill();
 		group.DOFade(1f, 0.2f).SetEase(Ease.OutSine);
 	}
 
+	private void Init()
+	{
+		Instance = this;
+
+		List<CharacterArchetype> archetypes = new List<CharacterArchetype>();
+		archetypes.Add(Prefabs.aristocratDetails);
+		archetypes.Add(Prefabs.companionDetails);
+		archetypes.Add(Prefabs.merchantDetails);
+		archetypes.Add(Prefabs.priestDetails);
+		archetypes.Add(Prefabs.scholarDetails);
+
+		slots = GetComponentsInChildren<ArchetypeChoice>().ToList();
+		foreach (var slot in slots)
+		{
+			slot.Archetype = archetypes.Random();
+		}
+	}
+
 	public void Hide()
 	{
 		group?.DOKill();
-		group.DOFade(1f, 0.2f).SetEase(Ease.OutSine);
+		group.DOFade(0f, 0.2f).SetEase(Ease.OutSine).OnComplete(() => { group.interactable = false; Level.LevelState = LevelState.BoardPreparation; });
 	}
 }
