@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: "Monast\xE8re"
   m_EditorClassIdentifier: 
   title: MONASTERE
-  description: Mon fils, le Seigneur vous ait en sa bonne garde ! Que puis-je pour
-    ton service ?
+  description: Mon fils, le Seigneur vous ait en sa bonne garde ! Que puis-je faire
+    pour vous ?
   character: {fileID: 11400000, guid: 561da9a8bd527e44babbbb0281fece26, type: 2}
   choices:
   - {fileID: 11400000, guid: 1602b29fdee932c4bb3352774470e722, type: 2}

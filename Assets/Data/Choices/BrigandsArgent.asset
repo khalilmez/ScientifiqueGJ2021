@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: BrigandsArgent
   m_EditorClassIdentifier: 
   text: Voici tout ce que j'ai ! -5 argent
-  conclusion: {fileID: 11400000, guid: 623c1fa96e8a0d9408e942ca05d6a1f9, type: 2}
+  conclusion: {fileID: 0}
   bonusHealth: 0
   bonusGold: -5

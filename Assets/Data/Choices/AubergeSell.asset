@@ -16,4 +16,4 @@ MonoBehaviour:
     dans vos \xE9curies : +3 argent"
   conclusion: {fileID: 0}
   bonusHealth: 0
-  bonusGold: 3
+  bonusGold: 2

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: "Monast\xE8reCroixReussi"
   m_EditorClassIdentifier: 
   text: Vers la gauche ?
-  conclusion: {fileID: 0}
+  conclusion: {fileID: 11400000, guid: 2de5339f97086924d87ad5fffb6cef44, type: 2}
   bonusHealth: 0
   bonusGold: 0
