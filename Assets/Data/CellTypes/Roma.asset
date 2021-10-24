@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5dfb64fecee7b347b9c0697ae4266c9, type: 3}
   m_Name: Roma
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 8162054983863635463, guid: 9da4ac50cb5841b4a855d90a5c0c524c, type: 3}
   audiosEntrance: []
+  jingles: []
   entranceEffects:
   - {fileID: 5586701228039997475, guid: 2c4e5f055003f104cb5fd2b27c22f338, type: 3}
