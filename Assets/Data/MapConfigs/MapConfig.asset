@@ -14,13 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthConsumption: 1
   winConditions:
-  - description: "Enfin arriv\xE9, la route fut longue..."
+  - description: "Vous parvenez \xE0 Rome, mais en bien pi\xE8tre \xE9tat et sans
+      le sou. Heureusement la ville compte de nombreuses hospices r\xE9put\xE9es
+      pour leur accueil d\xE9cent des indigents."
     healthRequired: 0
     goldRequired: 0
-  - description: "Des Nobles vous invitent \xE0 leur banquet !"
+  - description: "Vous arrivez \xE0 Rome frais et dispos ! Vous pouvez admirer le
+      Colis\xE9e et les autres ruines antiques, ainsi que la basilique Saint-Pierre,
+      malheureusement vous n'avez plus un sequin vaillant ni de relations pour vous
+      faire introduire dans la bonne soci\xE9t\xE9. Vous repartez donc en qu\xEAte
+      de nouvelles aventures !"
     healthRequired: 3
     goldRequired: 5
-  - description: Le Pape en personne vous accueille !
+  - description: "Gr\xE2ce \xE0 votre parcours sans faute et \xE0 vos lettres de
+      recommandation ,vous brillez dans les salons litt\xE9raires et \xEAtes re\xE7u
+      en audience par le Saint-P\xE8re. L'aristocratie locale vous montre les plus
+      beaux tr\xE9sors de l'Antiquit\xE9 et de la Renaissance accumul\xE9s dans ses
+      palais.  "
     healthRequired: 10
     goldRequired: 10
   cellActivationTiming: 0.08

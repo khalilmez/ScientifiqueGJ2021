@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5dfb64fecee7b347b9c0697ae4266c9, type: 3}
   m_Name: PathCailloux
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 606132884258997131, guid: 723db76c964b817419f0876baad3924a, type: 3}
   audiosEntrance: []
   jingles: []
   entranceEffects:

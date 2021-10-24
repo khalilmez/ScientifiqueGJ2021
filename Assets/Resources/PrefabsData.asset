@@ -24,5 +24,6 @@ MonoBehaviour:
   aubergeDetails: {fileID: 11400000, guid: cdbb5ab9568bb7946b9c40805aa90ac1, type: 2}
   monasteryDetails: {fileID: 11400000, guid: 3b12d14aecafaec4e9d93ddd93acc822, type: 2}
   paperScrollDetails: {fileID: 11400000, guid: 5940da118c7521646aa2cf79f1365f35, type: 2}
+  rocherDetails: {fileID: 11400000, guid: 4361f1ea91980864481141589151faaa, type: 2}
   winConditionSlotPrefab: {fileID: 4562353125309385372, guid: 76ae1c342fe74d64cb3032dcb86057b8,
     type: 3}
