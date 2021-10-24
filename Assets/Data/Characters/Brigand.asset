@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Brigand
   m_EditorClassIdentifier: 
   characterName: Brigand
-  sprite: {fileID: 21300000, guid: 41959e98dede7a24dac28978f7b22778, type: 3}
+  sprite: {fileID: 21300000, guid: 95976542f9b01f140bee1136de57db2e, type: 3}
