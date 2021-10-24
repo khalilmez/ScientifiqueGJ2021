@@ -41,9 +41,17 @@ public class QuestDisplay : MonoBehaviour
 
 			if (i < choices.Count && choices[i] != null)
 			{
-				child.gameObject.SetActive(true);
-				child.gameObject.transform.Find("Label").GetComponent<TextMeshProUGUI>().text = choices[i].text;
+				child.gameObject.transform.Find("Text").GetComponent<TextMeshProUGUI>().text = choices[i].text;
 				choicesDictionary.Add(child.name, choices[i]);
+                if ((Player.Gold + choices[i].bonusGold) < 0)
+                {
+					child.gameObject.GetComponent<Button>().interactable = false;
+                }
+                else
+				{
+					child.gameObject.GetComponent<Button>().interactable = true;
+				}
+				child.gameObject.SetActive(true);
 			}
 			else
 			{
@@ -53,9 +61,29 @@ public class QuestDisplay : MonoBehaviour
 		}
 	}
 
-	public void Submit()
+	public void Submit(GameObject button)
 	{
-		if (choices.IsEmpty())
+        if (choicesDictionary.ContainsKey(button.name))
+		{
+			Player.Health += choicesDictionary[button.name].bonusHealth;
+			Player.Gold += choicesDictionary[button.name].bonusGold;
+			if (choicesDictionary[button.name].conclusion != null)
+			{
+				quest = choicesDictionary[button.name].conclusion;
+				Init();
+			}
+			else
+			{
+				group.interactable = false;
+				group.alpha = 0f;
+			}
+        }
+        else
+		{
+			group.interactable = false;
+			group.alpha = 0f;
+		}
+		/*if (choices.IsEmpty())
 		{
 			group.interactable = false;
 			group.alpha = 0f;
@@ -79,7 +107,7 @@ public class QuestDisplay : MonoBehaviour
 
 				Init();
 			}
-		}
+		}*/
 	}
 	private IEnumerator DisplayQuest()
 	{
