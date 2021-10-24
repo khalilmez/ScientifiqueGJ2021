@@ -44,5 +44,36 @@ MonoBehaviour:
       max: 0
     autoDestroy: 0
     multiplier: 0
+  jingles:
+  - isUsingClips: 0
+    clip: {fileID: 8300000, guid: 1f1883a4c5f8a754a9c07cbd37f8e4bc, type: 3}
+    clips: []
+    mixerGroup: {fileID: -8607348671642123863, guid: dbd143edd4df0224d92ac4ff39f0844e,
+      type: 2}
+    loopType: 0
+    timeBetweenLoop:
+      min: 0
+      max: 0
+    isPitchModified: 1
+    pitchMaxVariation:
+      min: -0.1
+      max: 0.1
+    autoDestroy: 0
+    multiplier: 0
+  - isUsingClips: 0
+    clip: {fileID: 8300000, guid: dabd0f5a1b4cb944588ef2fc8d34ed17, type: 3}
+    clips: []
+    mixerGroup: {fileID: 9182279549660304041, guid: dbd143edd4df0224d92ac4ff39f0844e,
+      type: 2}
+    loopType: 0
+    timeBetweenLoop:
+      min: 0
+      max: 0
+    isPitchModified: 1
+    pitchMaxVariation:
+      min: -0.1
+      max: 0.1
+    autoDestroy: 0
+    multiplier: 0
   entranceEffects:
   - {fileID: 5586701228039997475, guid: 2c4e5f055003f104cb5fd2b27c22f338, type: 3}

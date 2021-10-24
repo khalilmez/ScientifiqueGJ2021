@@ -15,6 +15,9 @@ public class PlayerController : MonoBehaviour
 	[SerializeField] private Transform bodyHolder;
 	[SerializeField] private Dependency<SpriteRenderer> _spriteRenderer;
 
+	[Header("Sounds")]
+	[SerializeField] private AudioExpress moveSound;
+
 	[Header("Moving Animation")]
 	[SerializeField] private float moveCellDuration = 0.8f;
 	[SerializeField] private float moveAngle = 30f;
@@ -151,6 +154,7 @@ public class PlayerController : MonoBehaviour
 	private IEnumerator MoveCore(Cell cell)
 	{
 		Map.UnSelectAllCell();
+		moveSound.Play();
 
 		mover?.Kill();
 		mover = transform.DOMove(cell.transform.position, moveCellDuration).SetEase(Ease.OutSine);

@@ -16,6 +16,10 @@ public class Cell : MonoBehaviour
 
 	[SerializeField] private List<Cell> cellsToActivateByScroll = new List<Cell>();
 
+	[Header("Sounds")]
+	[SerializeField] private AudioExpress popSound;
+	[SerializeField] private AudioExpress parcheminSound;
+
 	[Header("References")]
 	[SerializeField] private SpriteRenderer spriteSelection;
 	[SerializeField] private SpriteRenderer spriteHover;
@@ -48,7 +52,6 @@ public class Cell : MonoBehaviour
 	public bool IsHover
 	{
 		get => isHover;
-
 		set
 		{
 			isHover = value;
@@ -147,6 +150,12 @@ public class Cell : MonoBehaviour
 				}
 				break;
 		}
+
+		if (Music.MusicOverride != null)
+		{
+			Music.MusicOverride.volume = 0f;
+			Music.MusicOverride.FadeIn(2.5f);
+		}
 	}
 
 	private void PlayEntranceJingle()
@@ -154,15 +163,33 @@ public class Cell : MonoBehaviour
 		switch (cellType)
 		{
 			case CellType.Path:
-				if (!Prefabs.pathDetails.audiosEntrance.IsEmpty())
+				if (!Prefabs.pathDetails.jingles.IsEmpty())
 				{
-					Prefabs.pathDetails.audiosEntrance.Random().Play();
+					Prefabs.pathDetails.jingles.Random().Play();
+				}
+				break;
+			case CellType.Auberge:
+				if (!Prefabs.aubergeDetails.jingles.IsEmpty())
+				{
+					Prefabs.aubergeDetails.jingles.Random().Play();
+				}
+				break;
+			case CellType.Monastery:
+				if (!Prefabs.monasteryDetails.jingles.IsEmpty())
+				{
+					Prefabs.monasteryDetails.jingles.Random().Play();
 				}
 				break;
 			case CellType.Roma:
-				if (!Prefabs.romaDetails.audiosEntrance.IsEmpty())
+				if (!Prefabs.romaDetails.jingles.IsEmpty())
 				{
-					Prefabs.romaDetails.audiosEntrance.Random().Play();
+					Prefabs.romaDetails.jingles.Random().Play();
+				}
+				break;
+			case CellType.PaperScroll:
+				if (!Prefabs.paperScrollDetails.jingles.IsEmpty())
+				{
+					Prefabs.paperScrollDetails.jingles.Random().Play();
 				}
 				break;
 		}
@@ -186,6 +213,13 @@ public class Cell : MonoBehaviour
 			cell.transform.gameObject.SetActive(true);
 			cell.transform.localScale = Vector3.zero;
 			cell.transform.DOScale(Vector3.one, Map.Config.cellActivationTiming).SetEase(Ease.OutBack);
+			popSound.Play();
+
+			if (cellType == CellType.PaperScroll)
+			{
+				parcheminSound.Play();
+			}
+
 			yield return new WaitForSeconds(Map.Config.cellActivationTiming);
 		}
 	}
@@ -220,6 +254,10 @@ public class Cell : MonoBehaviour
 
 	private void DeleteTypePrefab()
 	{
+		if (cellType == CellType.PaperScroll)
+		{
+			typePrefab.GetComponent<SpriteRenderer>().sortingLayerName = "Parchemin";
+		}
 		if (typePrefab != null)
 		{
 			typePrefab.transform.DOKill();

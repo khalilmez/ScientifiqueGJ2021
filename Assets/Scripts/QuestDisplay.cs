@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Tools;
+using Tools.Utils;
 using UnityEngine;
 using UnityEngine.UI;
 using static Facade;
@@ -13,6 +14,11 @@ public class QuestDisplay : PopupSingleton
 
 	[Header("Animations")]
 	[SerializeField] private float displayCharacterRate = 0.02f;
+
+	[Header("Sounds")]
+	[SerializeField] private AudioExpress openSound;
+	[SerializeField] private AudioExpress writingSound;
+	[SerializeField] private AudioExpress closeSound;
 
 	[Header("References")]
 	public TextMeshProUGUI Title;
@@ -31,7 +37,6 @@ public class QuestDisplay : PopupSingleton
 	{
 		base.Show();
 
-
 		choicesDictionary = new Dictionary<string, Choice>();
 		Title.text = Quest.title;
 		Character.GetComponent<Image>().sprite = Quest.character.sprite;
@@ -42,6 +47,11 @@ public class QuestDisplay : PopupSingleton
 			Title.color = Title.color.WithAlpha(0f);
 			Title.DOFade(1f, 0.2f);
 		}
+		else
+		{
+			openSound.Play();
+		}
+		writingSound.Play();
 
 		// Reset Choices
 		choicesList.ForEach(x => x.gameObject.SetActive(false));
@@ -95,6 +105,8 @@ public class QuestDisplay : PopupSingleton
 
 	public void Submit(QuestChoice choice)
 	{
+		Music.PlayClick();
+
 		StopDescriptionCore();
 		if (choice.Content != null)
 		{
@@ -121,6 +133,7 @@ public class QuestDisplay : PopupSingleton
 	public override void Close()
 	{
 		Player.ActiveCrossCells();
+		closeSound.Play();
 		base.Close();
 	}
 }

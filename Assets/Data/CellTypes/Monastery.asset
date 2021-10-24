@@ -17,13 +17,29 @@ MonoBehaviour:
   - isUsingClips: 0
     clip: {fileID: 8300000, guid: f1c9c586b78e67d4dad873a2b57aa840, type: 3}
     clips: []
-    mixerGroup: {fileID: 1937069268508046214, guid: dbd143edd4df0224d92ac4ff39f0844e,
+    mixerGroup: {fileID: 7922394082270181982, guid: dbd143edd4df0224d92ac4ff39f0844e,
       type: 2}
     loopType: 1
     timeBetweenLoop:
       min: 0
       max: 0
     isPitchModified: 0
+    pitchMaxVariation:
+      min: 0
+      max: 0
+    autoDestroy: 0
+    multiplier: 0
+  jingles:
+  - isUsingClips: 0
+    clip: {fileID: 8300000, guid: 3f3b9aa65c10ece4fbfa6c4c8530f1e0, type: 3}
+    clips: []
+    mixerGroup: {fileID: 7922394082270181982, guid: dbd143edd4df0224d92ac4ff39f0844e,
+      type: 2}
+    loopType: 0
+    timeBetweenLoop:
+      min: 0
+      max: 0
+    isPitchModified: 1
     pitchMaxVariation:
       min: 0
       max: 0

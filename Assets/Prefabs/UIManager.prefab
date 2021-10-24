@@ -4784,6 +4784,51 @@ MonoBehaviour:
     _source: 0
     _localReference: {fileID: 0}
   displayCharacterRate: 0.02
+  openSound:
+    isUsingClips: 0
+    clip: {fileID: 0}
+    clips: []
+    mixerGroup: {fileID: 0}
+    loopType: 0
+    timeBetweenLoop:
+      min: 1
+      max: 3
+    isPitchModified: 0
+    pitchMaxVariation:
+      min: -0.1
+      max: 0.1
+    autoDestroy: 0
+    multiplier: 5
+  writingSound:
+    isUsingClips: 0
+    clip: {fileID: 0}
+    clips: []
+    mixerGroup: {fileID: 0}
+    loopType: 0
+    timeBetweenLoop:
+      min: 1
+      max: 3
+    isPitchModified: 0
+    pitchMaxVariation:
+      min: -0.1
+      max: 0.1
+    autoDestroy: 0
+    multiplier: 5
+  closeSound:
+    isUsingClips: 0
+    clip: {fileID: 0}
+    clips: []
+    mixerGroup: {fileID: 0}
+    loopType: 0
+    timeBetweenLoop:
+      min: 1
+      max: 3
+    isPitchModified: 0
+    pitchMaxVariation:
+      min: -0.1
+      max: 0.1
+    autoDestroy: 0
+    multiplier: 5
   Title: {fileID: 6901397107661893648}
   description: {fileID: 8171548759778692893}
   choicesList:

@@ -10,6 +10,7 @@ public class MusicPlayer : MonoBehaviour
 	public static MusicPlayer Instance { get; private set; }
 
 	[SerializeField] private Dependency<AudioSource> _audioSource;
+	[SerializeField] private AudioExpress clicSound;
 
 	public AudioUnit MusicOverride { get; set; }
 
@@ -30,6 +31,11 @@ public class MusicPlayer : MonoBehaviour
 		}
 	}
 
+	public void PlayClick()
+	{
+		clicSound.Play();
+	}
+
 	public void SwitchBackToMain()
 	{
 		if (MusicOverride != null)
@@ -47,7 +53,7 @@ public class MusicPlayer : MonoBehaviour
 
 	public void FadOut()
 	{
-		audioSource.DOFade(0f, 0.2f);
+		audioSource.DOFade(0f, 2f);
 	}
 
 	public void TryUpdateClip(AudioClip clip)

@@ -175,7 +175,26 @@ MonoBehaviour:
   _spriteRenderer:
     _source: 2
     _localReference: {fileID: 0}
+  moveSound:
+    isUsingClips: 0
+    clip: {fileID: 8300000, guid: e53ed44e3056fad449e997b59cb398f7, type: 3}
+    clips: []
+    mixerGroup: {fileID: 6400586035033605740, guid: dbd143edd4df0224d92ac4ff39f0844e,
+      type: 2}
+    loopType: 0
+    timeBetweenLoop:
+      min: 1
+      max: 3
+    isPitchModified: 1
+    pitchMaxVariation:
+      min: -0.2
+      max: 0.2
+    autoDestroy: 0
+    multiplier: 5
   moveCellDuration: 0.8
+  moveAngle: 30
+  moveHeight: 0.4
+  entranceAnimationDuration: 0.5
   idleScaleXFactor: 0.9
   idleScaleYFactor: 1.05
   idleScaleDuration: 0.8
