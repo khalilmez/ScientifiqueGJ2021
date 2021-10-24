@@ -36,6 +36,7 @@ public sealed class PrefabsData : BaseIndex
 	public CellTypeDetails monasteryDetails;
 	public CellTypeDetails paperScrollDetails;
 	public CellTypeDetails rocherDetails;
+	public CellTypeDetails villageDetails;
 
 	[Header("UI")]
 	public WinConditionSlot winConditionSlotPrefab;

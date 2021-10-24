@@ -84,6 +84,9 @@ public class Cell : MonoBehaviour
 			case CellType.Rocher:
 				p = Prefabs.rocherDetails.prefab;
 				break;
+			case CellType.Village:
+				p = Prefabs.villageDetails.prefab; 
+				break;
 		}
 
 		if (p != null)

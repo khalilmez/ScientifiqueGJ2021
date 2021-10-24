@@ -5,5 +5,6 @@
 	Monastery,
 	PaperScroll,
 	Roma,
-	Rocher
+	Rocher,
+	Village
 }

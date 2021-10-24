@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5dfb64fecee7b347b9c0697ae4266c9, type: 3}
+  m_Name: Village
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 3303488438526171742, guid: 134a026e07597c24ebed95b3b383028d, type: 3}
+  audiosEntrance:
+  - isUsingClips: 0
+    clip: {fileID: 8300000, guid: ee94c49b9daa5f343b1a8128b06aa838, type: 3}
+    clips: []
+    mixerGroup: {fileID: -9041954097071767228, guid: dbd143edd4df0224d92ac4ff39f0844e,
+      type: 2}
+    loopType: 1
+    timeBetweenLoop:
+      min: 0
+      max: 0
+    isPitchModified: 0
+    pitchMaxVariation:
+      min: 0
+      max: 0
+    autoDestroy: 0
+    multiplier: 0
+  - isUsingClips: 0
+    clip: {fileID: 8300000, guid: d7b8ea5dfdc12014f8691ac5a0c7e4b5, type: 3}
+    clips: []
+    mixerGroup: {fileID: 5571241242523698325, guid: dbd143edd4df0224d92ac4ff39f0844e,
+      type: 2}
+    loopType: 1
+    timeBetweenLoop:
+      min: 0
+      max: 0
+    isPitchModified: 0
+    pitchMaxVariation:
+      min: 0
+      max: 0
+    autoDestroy: 0
+    multiplier: 0
+  jingles:
+  - isUsingClips: 0
+    clip: {fileID: 8300000, guid: 1f1883a4c5f8a754a9c07cbd37f8e4bc, type: 3}
+    clips: []
+    mixerGroup: {fileID: -8607348671642123863, guid: dbd143edd4df0224d92ac4ff39f0844e,
+      type: 2}
+    loopType: 0
+    timeBetweenLoop:
+      min: 0
+      max: 0
+    isPitchModified: 1
+    pitchMaxVariation:
+      min: -0.1
+      max: 0.1
+    autoDestroy: 0
+    multiplier: 0
+  - isUsingClips: 0
+    clip: {fileID: 8300000, guid: dabd0f5a1b4cb944588ef2fc8d34ed17, type: 3}
+    clips: []
+    mixerGroup: {fileID: 9182279549660304041, guid: dbd143edd4df0224d92ac4ff39f0844e,
+      type: 2}
+    loopType: 0
+    timeBetweenLoop:
+      min: 0
+      max: 0
+    isPitchModified: 1
+    pitchMaxVariation:
+      min: -0.1
+      max: 0.1
+    autoDestroy: 0
+    multiplier: 0
+  entranceEffects:
+  - {fileID: 5586701228039997475, guid: 2c4e5f055003f104cb5fd2b27c22f338, type: 3}
