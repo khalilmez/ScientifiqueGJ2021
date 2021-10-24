@@ -126,6 +126,7 @@ public class Cell : MonoBehaviour
 				break;
 			case CellType.PaperScroll:
 				ActivateCellWithScroll();
+				HUD.Instance.Hide();
 				break;
 		}
 	}

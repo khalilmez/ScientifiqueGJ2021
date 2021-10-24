@@ -132,6 +132,7 @@ public class PlayerController : MonoBehaviour
 
 		ActiveCrossCells();
 		HUDContent.Show();
+		HelpHUD.Instance.Show();
 		PlayIdleAnimation();
 	}
 
