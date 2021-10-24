@@ -71,7 +71,7 @@ public class QuestDisplay : PopupSingleton
 				if (i < choices.Count && choices[i] != null)
 				{
 					choice.Content = choices[i];
-					choice.Interactible = (Player.Gold + choices[i].bonusGold) > 0;
+					choice.Interactible = (Player.Gold + choices[i].bonusGold) >= 0;
 					choicesDictionary.Add(choice.name, choices[i]);
 					choice.gameObject.SetActive(true);
 				}
