@@ -17,5 +17,5 @@ MonoBehaviour:
     ?"
   character: {fileID: 11400000, guid: 561da9a8bd527e44babbbb0281fece26, type: 2}
   choices:
-  - {fileID: 11400000, guid: ce7ad079cec55c140a4a77a93c42cdf7, type: 2}
-  - {fileID: 11400000, guid: 29cbcb81c756ec5438b96922d9cf9862, type: 2}
+  - {fileID: 11400000, guid: f9a4de9761d6ed445991f911d0ed0dcd, type: 2}
+  - {fileID: 11400000, guid: 49b2db01b6ef9594ea95053398b3bb92, type: 2}

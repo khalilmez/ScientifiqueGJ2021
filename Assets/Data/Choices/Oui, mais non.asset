@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Oui, mais non
   m_EditorClassIdentifier: 
   text: Oui !
-  conclusion: {fileID: 0}
+  conclusion: {fileID: 11400000, guid: aabd97ddcbbb28f42a2fb5f7e805e8cd, type: 2}
   diplayStats: 1
   bonusHealth: 0
   bonusGold: 0

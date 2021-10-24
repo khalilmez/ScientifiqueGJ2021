@@ -17,7 +17,7 @@ MonoBehaviour:
   bodySprites: []
   portraitSprites: []
   health:
-    min: 15
+    min: 13
     max: 15
   stamina:
     min: 15
