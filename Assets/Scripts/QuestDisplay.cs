@@ -110,7 +110,6 @@ public class QuestDisplay : PopupSingleton
 		StopDescriptionCore();
 		if (choice.Content != null)
 		{
-
 			Player.Health += choice.BonusHealth;
 			Player.Gold += choice.BonusGold;
 

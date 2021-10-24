@@ -31,6 +31,8 @@ public class Cell : MonoBehaviour
 	private bool setupScrollDone;
 	private GameObject typePrefab;
 
+	public CellType Type => cellType;
+
 	public bool IsSelected
 	{
 		get => isSelected;
@@ -215,7 +217,7 @@ public class Cell : MonoBehaviour
 			cell.transform.DOScale(Vector3.one, Map.Config.cellActivationTiming).SetEase(Ease.OutBack);
 			popSound.Play();
 
-			if (cellType == CellType.PaperScroll)
+			if (cell.Type == CellType.PaperScroll)
 			{
 				parcheminSound.Play();
 			}

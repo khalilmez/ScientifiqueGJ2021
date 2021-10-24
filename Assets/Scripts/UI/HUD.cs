@@ -30,8 +30,19 @@ public class HUD : MonoBehaviour
 	public void SetHealth(int value)
 	{
 		healthText.DOKill();
-		healthText.color = int.Parse(healthText.text) > value ? negativeScore : positiveScore;
-		healthText.DOColor(Color.white, 0.3f).SetEase(Ease.OutSine);
+
+		healthText.color = Color.white;
+		if (int.Parse(healthText.text) > value)
+		{
+			healthText.color = negativeScore;
+			healthText.DOColor(Color.white, 0.3f).SetEase(Ease.OutSine);
+
+		}
+		else if (int.Parse(healthText.text) < value)
+		{
+			healthText.color = positiveScore;
+			healthText.DOColor(Color.white, 0.3f).SetEase(Ease.OutSine);
+		}
 
 		healthText.text = Mathf.Max(0, value).ToString();
 	}
