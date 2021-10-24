@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8903617894998721471}
   - component: {fileID: 1462183055819325991}
   - component: {fileID: -9062791366815029884}
+  - component: {fileID: 8316652798421489374}
   m_Layer: 0
   m_Name: rochers
   m_TagString: Untagged
@@ -95,3 +96,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c09681f29e22d594e98e84e255d07358, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8316652798421489374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606132884258997131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edd80884ff9d9bd4a90b8f0f6b40b404, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 21300000, guid: 8c73d384cd1ea5846802945d0d43e351, type: 3}
+  - {fileID: 21300000, guid: dccf768caa214a34cb6d213e0eeb1865, type: 3}
+  _spriteRenderer:
+    _source: 0
+    _localReference: {fileID: 0}
