@@ -55,6 +55,7 @@ public class MapController : MonoBehaviour
 		cells.Add(GetCell(position + new Vector3(0, 0, 1)));
 		cells.Add(GetCell(position + new Vector3(0, 0, -1)));
 		cells = cells.WithoutNullValues().ToList();
+		cells = cells.Where(x => x.Type != CellType.Rocher).ToList();
 		return cells;
 	}
 

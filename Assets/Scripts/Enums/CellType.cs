@@ -4,5 +4,6 @@
 	Auberge,
 	Monastery,
 	PaperScroll,
-	Roma
+	Roma,
+	Rocher
 }

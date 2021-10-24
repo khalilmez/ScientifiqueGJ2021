@@ -29,5 +29,5 @@ MonoBehaviour:
     min: 13
     max: 18
   gold:
-    min: 23
-    max: 23
+    min: 19
+    max: 19
