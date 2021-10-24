@@ -56,6 +56,10 @@ public class HUD : MonoBehaviour
 			healthText.DOColor(Color.white, 0.3f).SetEase(Ease.OutSine);
 		}
 
+		healthText.transform.DOKill();
+		healthText.transform.localScale = Vector3.one * 1.2f;
+		healthText.transform.DOScale(Vector3.one, 0.2f).SetEase(Ease.OutSine);
+
 		healthText.text = Mathf.Max(0, value).ToString();
 	}
 
@@ -99,6 +103,10 @@ public class HUD : MonoBehaviour
 				bonusSound.Play();
 			}
 		}
+
+		goldText.transform.DOKill();
+		goldText.transform.localScale = Vector3.one * 1.2f;
+		goldText.transform.DOScale(Vector3.one, 0.2f).SetEase(Ease.OutSine);
 
 		goldText.text = Mathf.Max(0, value).ToString();
 	}
