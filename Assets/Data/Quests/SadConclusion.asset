@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: SadConclusion
   m_EditorClassIdentifier: 
   title: BRIGANDS
-  description: "Et ils pass\xE8rent sur votre corps : -5 Vie"
+  description: "Et ils pass\xE8rent sur votre corps"
   character: {fileID: 11400000, guid: 08522f057c80c2043a354078e7d778a0, type: 2}
-  choices: []
+  choices:
+  - {fileID: 11400000, guid: 035a5c0efe616d3439d42c6e29860256, type: 2}

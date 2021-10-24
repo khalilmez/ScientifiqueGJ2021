@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70ca7c3d3dbad2a43b2ba736c27d5872, type: 3}
   m_Name: BrigandsFuite 1
   m_EditorClassIdentifier: 
-  text: Vous voulez vous battre ?
-  conclusion: {fileID: 11400000, guid: 27df7db9ab4d3b6408b7765d9869ac2f, type: 2}
+  text: 
+  conclusion: {fileID: 0}
   diplayStats: 1
   bonusHealth: -5
   bonusGold: 0

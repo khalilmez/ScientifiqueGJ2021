@@ -17,4 +17,4 @@ MonoBehaviour:
   conclusion: {fileID: 0}
   diplayStats: 1
   bonusHealth: 2
-  bonusGold: -3
+  bonusGold: -4

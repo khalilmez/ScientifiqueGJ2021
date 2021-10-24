@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70ca7c3d3dbad2a43b2ba736c27d5872, type: 3}
   m_Name: "Monast\xE8reHealth 1"
   m_EditorClassIdentifier: 
-  text: 'Je souhaiterais me recueillir devant les reliques de Saint Christophe :
-    +5 Vie'
+  text: Je souhaiterais me recueillir devant les reliques de Saint Christophe
   conclusion: {fileID: 11400000, guid: 35e1d2992dc0bb440b4af3ae1f09de25, type: 2}
   diplayStats: 1
   bonusHealth: 5

@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: Il faudra me passer sur le corps !
   conclusion: {fileID: 11400000, guid: 623c1fa96e8a0d9408e942ca05d6a1f9, type: 2}
-  diplayStats: 1
-  bonusHealth: -5
+  diplayStats: 0
+  bonusHealth: 0
   bonusGold: 0

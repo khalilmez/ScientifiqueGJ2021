@@ -14,12 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   names:
   - Henry
+  bodySprites: []
+  portraitSprites: []
   health:
-    min: 10
+    min: 15
     max: 15
   stamina:
     min: 15
-    max: 20
+    max: 15
   force:
     min: 6
     max: 11
@@ -28,4 +30,4 @@ MonoBehaviour:
     max: 18
   gold:
     min: 23
-    max: 28
+    max: 23
