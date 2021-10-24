@@ -150,8 +150,7 @@ public class Cell : MonoBehaviour
 
 	private IEnumerator ActivateCellWithScrollCore()
 	{
-		cellsToActivateByScroll = cellsToActivateByScroll.OrderBy(x => x.transform.position.x).ThenBy(x => x.transform.position.z).ToList();
-		foreach (var cell in cellsToActivateByScroll)
+		foreach (var cell in cellsToActivateByScroll.Shuffle())
 		{
 			cell.transform.gameObject.SetActive(true);
 			cell.transform.localScale = Vector3.zero;

@@ -50,6 +50,9 @@ TagManager:
   - name: Player
     uniqueID: 1476709903
     locked: 0
+  - name: Parchemin
+    uniqueID: 4020342829
+    locked: 0
   - name: UI
     uniqueID: 2918147477
     locked: 0

@@ -101,7 +101,7 @@ namespace Tools
 			}
 
 			volume.profile.TryGetSettings<ChromaticAberration>(out chromatic);
-			if (volume != null)
+			if (volume != null && chromatic != null)
 			{
 				startChromaticAberation = chromatic.intensity;
 			}

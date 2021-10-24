@@ -15,8 +15,13 @@ public class PlayerController : MonoBehaviour
 	[SerializeField] private Transform bodyHolder;
 	[SerializeField] private Dependency<SpriteRenderer> _spriteRenderer;
 
+	[Header("Sounds")]
+	[SerializeField] private AudioExpress damageSound;
+
 	[Header("Moving Animation")]
 	[SerializeField] private float moveCellDuration = 0.8f;
+	[SerializeField] private float moveAngle = 30f;
+	[SerializeField] private float moveHeight = 0.4f;
 
 	[Header("Entrance Animations")]
 	[SerializeField] private float entranceAnimationDuration = 0.5f;
@@ -143,17 +148,20 @@ public class PlayerController : MonoBehaviour
 		if (!cell.IsSelected)
 			return;
 
-		StartCoroutine(MoveCore(cell, moveCellDuration));
+		StartCoroutine(MoveCore(cell));
 	}
 
-	private IEnumerator MoveCore(Cell cell, float duration)
+	private IEnumerator MoveCore(Cell cell)
 	{
 		Map.UnSelectAllCell();
 
 		mover?.Kill();
-		mover = transform.DOMove(cell.transform.position, duration).SetEase(Ease.OutSine);
+		mover = transform.DOMove(cell.transform.position, moveCellDuration).SetEase(Ease.OutSine);
+		PlayWalkingAnimation();
+
 		yield return mover.WaitForCompletion();
 
+		PlayIdleAnimation();
 		Level.GenerateImpulse();
 		Health -= Map.Config.healthConsumption;
 
@@ -166,6 +174,7 @@ public class PlayerController : MonoBehaviour
 
 	private void PlayIdleAnimation()
 	{
+		bodyHolder.localRotation = Quaternion.identity;
 		bodyHolder.DOKill();
 		bodyHolder.DOScaleX(idleScaleXFactor, idleScaleDuration).SetEase(idleScaleEase).SetLoops(-1, LoopType.Yoyo);
 		bodyHolder.DOScaleY(idleScaleYFactor, idleScaleDuration).SetEase(idleScaleEase).SetLoops(-1, LoopType.Yoyo);
@@ -173,8 +182,16 @@ public class PlayerController : MonoBehaviour
 
 	private void PlayWalkingAnimation()
 	{
+		bodyHolder.localScale = Vector3.one;
 		bodyHolder.DOKill();
-		bodyHolder.DOScaleX(idleScaleXFactor, idleScaleDuration).SetEase(idleScaleEase).SetLoops(-1, LoopType.Yoyo);
-		bodyHolder.DOScaleY(idleScaleYFactor, idleScaleDuration).SetEase(idleScaleEase).SetLoops(-1, LoopType.Yoyo);
+
+
+		int mulitplier = Random.value > 0.5f ? 1 : -1;
+		bodyHolder.DOMoveY(moveHeight, moveCellDuration / 4).SetRelative().SetLoops(4, LoopType.Yoyo);
+
+		bodyHolder.DOLocalRotate(new Vector3(0f, 0f, mulitplier * moveAngle), moveCellDuration / 4).SetRelative().SetLoops(2, LoopType.Yoyo).OnComplete(() =>
+		{
+			bodyHolder.DOLocalRotate(new Vector3(0f, 0f, -mulitplier * moveAngle), moveCellDuration / 4).SetRelative().SetLoops(2, LoopType.Yoyo);
+		});
 	}
 }
