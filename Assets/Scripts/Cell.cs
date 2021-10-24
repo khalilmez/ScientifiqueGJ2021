@@ -85,7 +85,7 @@ public class Cell : MonoBehaviour
 				p = Prefabs.rocherDetails.prefab;
 				break;
 			case CellType.Village:
-				p = Prefabs.villageDetails.prefab; 
+				p = Prefabs.villageDetails.prefab;
 				break;
 		}
 
@@ -155,6 +155,13 @@ public class Cell : MonoBehaviour
 				if (!Prefabs.monasteryDetails.audiosEntrance.IsEmpty())
 				{
 					Music.MusicOverride = Prefabs.monasteryDetails.audiosEntrance.Random().Play();
+				}
+				break;
+			case CellType.Village:
+				MusicPlayer.Instance.FadOut();
+				if (!Prefabs.villageDetails.audiosEntrance.IsEmpty())
+				{
+					Music.MusicOverride = Prefabs.villageDetails.audiosEntrance.Random().Play();
 				}
 				break;
 		}

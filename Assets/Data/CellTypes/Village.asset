@@ -15,24 +15,9 @@ MonoBehaviour:
   prefab: {fileID: 8162054983863635463, guid: 18779a8092f22b84f9350c4c3314d554, type: 3}
   audiosEntrance:
   - isUsingClips: 0
-    clip: {fileID: 8300000, guid: ee94c49b9daa5f343b1a8128b06aa838, type: 3}
+    clip: {fileID: 8300000, guid: 4d4b2c3835551f246bf3c115b68579df, type: 3}
     clips: []
-    mixerGroup: {fileID: -9041954097071767228, guid: dbd143edd4df0224d92ac4ff39f0844e,
-      type: 2}
-    loopType: 1
-    timeBetweenLoop:
-      min: 0
-      max: 0
-    isPitchModified: 0
-    pitchMaxVariation:
-      min: 0
-      max: 0
-    autoDestroy: 0
-    multiplier: 0
-  - isUsingClips: 0
-    clip: {fileID: 8300000, guid: d7b8ea5dfdc12014f8691ac5a0c7e4b5, type: 3}
-    clips: []
-    mixerGroup: {fileID: 5571241242523698325, guid: dbd143edd4df0224d92ac4ff39f0844e,
+    mixerGroup: {fileID: -5381732788057485969, guid: dbd143edd4df0224d92ac4ff39f0844e,
       type: 2}
     loopType: 1
     timeBetweenLoop:
