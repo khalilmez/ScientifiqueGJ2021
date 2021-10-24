@@ -13,6 +13,36 @@ MonoBehaviour:
   m_Name: Auberge
   m_EditorClassIdentifier: 
   prefab: {fileID: 3303488438526171742, guid: 134a026e07597c24ebed95b3b383028d, type: 3}
-  audiosEntrance: []
+  audiosEntrance:
+  - isUsingClips: 0
+    clip: {fileID: 8300000, guid: ee94c49b9daa5f343b1a8128b06aa838, type: 3}
+    clips: []
+    mixerGroup: {fileID: -9041954097071767228, guid: dbd143edd4df0224d92ac4ff39f0844e,
+      type: 2}
+    loopType: 1
+    timeBetweenLoop:
+      min: 0
+      max: 0
+    isPitchModified: 0
+    pitchMaxVariation:
+      min: 0
+      max: 0
+    autoDestroy: 0
+    multiplier: 0
+  - isUsingClips: 0
+    clip: {fileID: 8300000, guid: d7b8ea5dfdc12014f8691ac5a0c7e4b5, type: 3}
+    clips: []
+    mixerGroup: {fileID: 5571241242523698325, guid: dbd143edd4df0224d92ac4ff39f0844e,
+      type: 2}
+    loopType: 1
+    timeBetweenLoop:
+      min: 0
+      max: 0
+    isPitchModified: 0
+    pitchMaxVariation:
+      min: 0
+      max: 0
+    autoDestroy: 0
+    multiplier: 0
   entranceEffects:
   - {fileID: 5586701228039997475, guid: 2c4e5f055003f104cb5fd2b27c22f338, type: 3}

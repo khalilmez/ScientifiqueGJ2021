@@ -13,6 +13,21 @@ MonoBehaviour:
   m_Name: Monastery
   m_EditorClassIdentifier: 
   prefab: {fileID: 3303488438526171742, guid: 373d2df0419cc584587b3b5fabc26c7a, type: 3}
-  audiosEntrance: []
+  audiosEntrance:
+  - isUsingClips: 0
+    clip: {fileID: 8300000, guid: f1c9c586b78e67d4dad873a2b57aa840, type: 3}
+    clips: []
+    mixerGroup: {fileID: 1937069268508046214, guid: dbd143edd4df0224d92ac4ff39f0844e,
+      type: 2}
+    loopType: 1
+    timeBetweenLoop:
+      min: 0
+      max: 0
+    isPitchModified: 0
+    pitchMaxVariation:
+      min: 0
+      max: 0
+    autoDestroy: 0
+    multiplier: 0
   entranceEffects:
   - {fileID: 5586701228039997475, guid: 2c4e5f055003f104cb5fd2b27c22f338, type: 3}

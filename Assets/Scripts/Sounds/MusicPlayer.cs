@@ -1,6 +1,7 @@
 ﻿using DG.Tweening;
 using System.Collections;
 using Tools;
+using Tools.Utils;
 using UnityEngine;
 using static Facade;
 
@@ -9,6 +10,9 @@ public class MusicPlayer : MonoBehaviour
 	public static MusicPlayer Instance { get; private set; }
 
 	[SerializeField] private Dependency<AudioSource> _audioSource;
+
+	public AudioUnit MusicOverride { get; set; }
+
 	private AudioSource audioSource => _audioSource.Resolve(this);
 
 	private Coroutine updateClip;
@@ -24,6 +28,26 @@ public class MusicPlayer : MonoBehaviour
 		{
 			Destroy(gameObject);
 		}
+	}
+
+	public void SwitchBackToMain()
+	{
+		if (MusicOverride != null)
+		{
+			MusicOverride.FadeOut(returnToPool: true);
+			MusicOverride = null;
+			FadIn();
+		}
+	}
+
+	public void FadIn()
+	{
+		audioSource.DOFade(1f, 0.2f);
+	}
+
+	public void FadOut()
+	{
+		audioSource.DOFade(0f, 0.2f);
 	}
 
 	public void TryUpdateClip(AudioClip clip)

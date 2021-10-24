@@ -10,6 +10,8 @@ using static Facade;
 
 public class Cell : MonoBehaviour
 {
+	private readonly Vector3 defaultScale = new Vector3(0.95f, 0.95f, 1f);
+
 	[SerializeField] private CellType cellType;
 
 	[SerializeField] private List<Cell> cellsToActivateByScroll = new List<Cell>();
@@ -28,11 +30,18 @@ public class Cell : MonoBehaviour
 	public bool IsSelected
 	{
 		get => isSelected;
-
 		set
 		{
 			isSelected = value;
 			spriteSelection.gameObject.SetActive(isSelected);
+			if (isSelected)
+			{
+				StartActiveAnimation();
+			}
+			else
+			{
+				spriteSelection.transform.DOKill();
+			}
 		}
 	}
 
@@ -93,7 +102,8 @@ public class Cell : MonoBehaviour
 
 	public void DoEntranceAction()
 	{
-		PlayEntranceSound();
+		PlayEntranceJingle();
+		PlayEntranceMusic();
 		ShowEntranceEffect();
 		OpenDialog();
 
@@ -118,7 +128,28 @@ public class Cell : MonoBehaviour
 		}
 	}
 
-	private void PlayEntranceSound()
+	private void PlayEntranceMusic()
+	{
+		switch (cellType)
+		{
+			case CellType.Auberge:
+				MusicPlayer.Instance.FadOut();
+				if (!Prefabs.aubergeDetails.audiosEntrance.IsEmpty())
+				{
+					Music.MusicOverride = Prefabs.aubergeDetails.audiosEntrance.Random().Play();
+				}
+				break;
+			case CellType.Monastery:
+				MusicPlayer.Instance.FadOut();
+				if (!Prefabs.monasteryDetails.audiosEntrance.IsEmpty())
+				{
+					Music.MusicOverride = Prefabs.monasteryDetails.audiosEntrance.Random().Play();
+				}
+				break;
+		}
+	}
+
+	private void PlayEntranceJingle()
 	{
 		switch (cellType)
 		{
@@ -195,5 +226,11 @@ public class Cell : MonoBehaviour
 			typePrefab.transform.DOScale(0f, 0.5f).SetEase(Ease.OutSine);
 			typePrefab.transform.DOLocalMoveZ(-2f, 0.5f).SetEase(Ease.OutSine).OnComplete(() => Destroy(typePrefab));
 		}
+	}
+
+	private void StartActiveAnimation()
+	{
+		spriteSelection.transform.localScale = defaultScale;
+		spriteSelection.transform.DOScale(defaultScale * 0.7f, 0.4f).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);
 	}
 }

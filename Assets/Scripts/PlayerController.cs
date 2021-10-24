@@ -15,9 +15,6 @@ public class PlayerController : MonoBehaviour
 	[SerializeField] private Transform bodyHolder;
 	[SerializeField] private Dependency<SpriteRenderer> _spriteRenderer;
 
-	[Header("Sounds")]
-	[SerializeField] private AudioExpress damageSound;
-
 	[Header("Moving Animation")]
 	[SerializeField] private float moveCellDuration = 0.8f;
 	[SerializeField] private float moveAngle = 30f;
@@ -161,6 +158,7 @@ public class PlayerController : MonoBehaviour
 
 		yield return mover.WaitForCompletion();
 
+		Music.SwitchBackToMain();
 		PlayIdleAnimation();
 		Level.GenerateImpulse();
 		Health -= Map.Config.healthConsumption;
