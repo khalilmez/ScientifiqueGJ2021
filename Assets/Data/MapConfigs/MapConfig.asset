@@ -13,4 +13,14 @@ MonoBehaviour:
   m_Name: MapConfig
   m_EditorClassIdentifier: 
   healthConsumption: 1
-  cellActivationTiming: 0.1
+  winConditions:
+  - description: Sans abri
+    healthRequired: 0
+    goldRequired: 0
+  - description: Noble
+    healthRequired: 3
+    goldRequired: 5
+  - description: Pape
+    healthRequired: 10
+    goldRequired: 10
+  cellActivationTiming: 0.08

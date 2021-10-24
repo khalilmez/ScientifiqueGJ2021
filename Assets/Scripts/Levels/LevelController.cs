@@ -23,8 +23,6 @@ public class LevelController : SceneBase
 	public event LevelEventHandler OnBoardPreparation;
 	public event LevelEventHandler OnBoardPlaying;
 	public event LevelEventHandler EndGame;
-	[SerializeField] GameObject WinMenu;
-	[SerializeField] GameObject LoseMenu;
 	private LevelState levelState;
 
 	public LevelState LevelState
@@ -51,11 +49,11 @@ public class LevelController : SceneBase
 					{
 						if (Player.Health <= 0)
 						{
-							LoseMenu.SetActive(true);
+							LoseMenu.Instance.Show();
 						}
 						else
 						{
-							WinMenu.SetActive(true);
+							WinMenu.Instance.Show();
 						}
 						EndGame?.Invoke();
 						break;

@@ -1,12 +1,12 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "MapConfig", menuName = "MapConfig", order = 1)]
 public class MapConfig : ScriptableObject
 {
 	public int healthConsumption = 1;
+	public List<WinCondition> winConditions = new List<WinCondition>();
 
-	[Header("Cell")]
-	public float cellActivationTiming = 0.05f;
-
-
+	[Space]
+	public float cellActivationTiming = 0.035f;
 }

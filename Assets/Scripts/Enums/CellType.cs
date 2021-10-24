@@ -2,6 +2,7 @@
 {
 	Path,
 	Auberge,
+	Monastery,
 	PaperScroll,
 	Roma
 }

@@ -15,4 +15,4 @@ MonoBehaviour:
   prefab: {fileID: 3303488438526171742, guid: 134a026e07597c24ebed95b3b383028d, type: 3}
   audiosEntrance: []
   entranceEffects:
-  - {fileID: 2433878528894686170, guid: bf4f16fefbe0f67449962e9bb884fed7, type: 3}
+  - {fileID: 5586701228039997475, guid: 2c4e5f055003f104cb5fd2b27c22f338, type: 3}

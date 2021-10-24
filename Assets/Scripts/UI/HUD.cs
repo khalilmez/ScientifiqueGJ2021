@@ -60,6 +60,6 @@ public class HUD : MonoBehaviour
 	public void Hide()
 	{
 		group?.DOKill();
-		group.DOFade(1f, 0.2f).SetEase(Ease.OutSine);
+		group.DOFade(0f, 0.2f).SetEase(Ease.OutSine);
 	}
 }

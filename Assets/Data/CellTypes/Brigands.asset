@@ -12,9 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5dfb64fecee7b347b9c0697ae4266c9, type: 3}
   m_Name: Brigands
   m_EditorClassIdentifier: 
-  quests: []
-  spritesBuilding:
-  - {fileID: -666029461122602693, guid: d73f967faa978cf4e84a6d4e1aff4ef6, type: 3}
+  prefab: {fileID: 0}
   audiosEntrance: []
   entranceEffects:
-  - {fileID: 2433878528894686170, guid: bf4f16fefbe0f67449962e9bb884fed7, type: 3}
+  - {fileID: 5586701228039997475, guid: 2c4e5f055003f104cb5fd2b27c22f338, type: 3}

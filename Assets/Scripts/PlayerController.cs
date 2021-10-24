@@ -18,6 +18,9 @@ public class PlayerController : MonoBehaviour
 	[Header("Moving Animation")]
 	[SerializeField] private float moveCellDuration = 0.8f;
 
+	[Header("Entrance Animations")]
+	[SerializeField] private float entranceAnimationDuration = 0.5f;
+
 	[Header("Idle Animation")]
 	[SerializeField] private float idleScaleXFactor = 0.9f;
 	[SerializeField] private float idleScaleYFactor = 1.1f;
@@ -38,6 +41,11 @@ public class PlayerController : MonoBehaviour
 		get => health;
 		set
 		{
+			if (value < health)
+			{
+				Level.GenerateImpulse();
+			}
+
 			health = value;
 			HUDContent.SetHealth(health);
 			if (health <= 0)
@@ -103,6 +111,20 @@ public class PlayerController : MonoBehaviour
 			spriteRenderer.sprite = characterArchetype.bodySprites.Random();
 		}
 
+		StartCoroutine(PlaySpawnAnimationCore());
+	}
+
+	private IEnumerator PlaySpawnAnimationCore()
+	{
+		spriteRenderer.color = spriteRenderer.color.WithAlpha(0f);
+		spriteRenderer.DOFade(1f, entranceAnimationDuration);
+		Vector3 currentPosition = transform.position;
+
+		transform.position = currentPosition.plusY(1f);
+		transform.DOMove(currentPosition, entranceAnimationDuration).SetEase(Ease.OutSine);
+
+		yield return new WaitForSeconds(entranceAnimationDuration);
+
 		ActiveCrossCells();
 		HUDContent.Show();
 		PlayIdleAnimation();
@@ -110,6 +132,9 @@ public class PlayerController : MonoBehaviour
 
 	public void ActiveCrossCells()
 	{
+		if (QuestDisplay.Instance.IsActive)
+			return;
+
 		Map.ActiveCrossCells(transform.position);
 	}
 
@@ -129,6 +154,7 @@ public class PlayerController : MonoBehaviour
 		mover = transform.DOMove(cell.transform.position, duration).SetEase(Ease.OutSine);
 		yield return mover.WaitForCompletion();
 
+		Level.GenerateImpulse();
 		Health -= Map.Config.healthConsumption;
 
 		if (Health > 0)

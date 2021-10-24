@@ -7,44 +7,41 @@ using UnityEngine;
 using UnityEngine.UI;
 using static Facade;
 
-public class QuestDisplay : MonoBehaviour
+public class QuestDisplay : PopupSingleton
 {
-	private Vector3 animationDefault = Vector3.one * 0.95f;
-
 	public static QuestDisplay Instance { get; private set; }
 
 	[Header("Animations")]
-	[SerializeField] private float animationDuration = 0.2f;
+	[SerializeField] private float displayCharacterRate = 0.02f;
 
 	[Header("References")]
 	public TextMeshProUGUI Title;
-	public TextMeshProUGUI Description;
+	public TextMeshProUGUI description;
 	public List<QuestChoice> choicesList = new List<QuestChoice>();
 	public Dictionary<string, Choice> choicesDictionary;
 
-	[SerializeField] private Dependency<CanvasGroup> _group;
-
 	private List<Choice> choices;
+	private Coroutine displayDescriptionCore;
 
-	private CanvasGroup group => _group.Resolve(this);
 	public Quest Quest { get; set; }
-	public bool IsActive => group.interactable == true;
 
 	private void Awake() => Instance = this;
 
-	public void Init()
+	public override void Show()
 	{
-		if (!IsActive)
-		{
-			group.DOKill();
-			transform.localScale = animationDefault;
-			transform.DOScale(Vector3.one, animationDuration).SetEase(Ease.OutSine);
-			group.DOFade(1f, animationDuration).OnComplete(() => { group.interactable = true; });
-		}
+		base.Show();
+
 
 		choicesDictionary = new Dictionary<string, Choice>();
 		Title.text = Quest.title;
-		Description.text = Quest.description;
+
+		displayDescriptionCore = StartCoroutine(ShowDescriptionCore());
+
+		if (IsActive)
+		{
+			Title.color = Title.color.WithAlpha(0f);
+			Title.DOFade(1f, 0.2f);
+		}
 
 		// Reset Choices
 		choicesList.ForEach(x => x.gameObject.SetActive(false));
@@ -78,17 +75,37 @@ public class QuestDisplay : MonoBehaviour
 		}
 	}
 
+	private IEnumerator ShowDescriptionCore()
+	{
+		description.text = "";
+		foreach (var c in Quest.description)
+		{
+			description.text += c;
+			yield return new WaitForSeconds(displayCharacterRate);
+		}
+	}
+
+	private void StopDescriptionCore()
+	{
+		if (displayDescriptionCore != null)
+		{
+			StopCoroutine(displayDescriptionCore);
+		}
+	}
+
 	public void Submit(QuestChoice choice)
 	{
+		StopDescriptionCore();
 		if (choice.Content != null)
 		{
 
 			Player.Health += choice.BonusHealth;
 			Player.Gold += choice.BonusGold;
-			if (choice.Content.conclusion != null)
+
+			if (choice.Content.conclusion != null && Player.Health > 0)
 			{
 				Quest = choice.Content.conclusion;
-				Init();
+				Show();
 			}
 			else
 			{
@@ -101,11 +118,9 @@ public class QuestDisplay : MonoBehaviour
 		}
 	}
 
-	private void Close()
+	public override void Close()
 	{
-		group.DOKill();
-		group.interactable = false;
-		transform.DOScale(animationDefault, animationDuration).SetEase(Ease.OutSine);
-		group.DOFade(0f, animationDuration);
+		Player.ActiveCrossCells();
+		base.Close();
 	}
 }

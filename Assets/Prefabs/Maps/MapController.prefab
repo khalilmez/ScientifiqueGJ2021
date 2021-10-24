@@ -1709,7 +1709,7 @@ MonoBehaviour:
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 7720186914932905317}
   spriteHover: {fileID: 890718439779682588}
-  spriteType: {fileID: 6107467550305293193}
+  spawnPrefabType: {fileID: 0}
 --- !u!1 &2003288017341636626
 GameObject:
   m_ObjectHideFlags: 0
@@ -2254,7 +2254,7 @@ MonoBehaviour:
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 2003288019286092130}
   spriteHover: {fileID: 2003288017571681309}
-  spriteType: {fileID: 2003288017349656614}
+  spawnPrefabType: {fileID: 0}
 --- !u!1 &2003288017378283147
 GameObject:
   m_ObjectHideFlags: 0
@@ -2368,7 +2368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c58ce4d14c58c304599c046483c4243d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cellType: 2
+  cellType: 3
   cellsToActivateByScroll:
   - {fileID: 2003288017466425841}
   - {fileID: 2003288017530410836}
@@ -2392,7 +2392,7 @@ MonoBehaviour:
   - {fileID: 2003288019125879212}
   spriteSelection: {fileID: 2003288018814343165}
   spriteHover: {fileID: 2003288019263984463}
-  spriteType: {fileID: 2003288018228092395}
+  spawnPrefabType: {fileID: 0}
 --- !u!1 &2003288017396825219
 GameObject:
   m_ObjectHideFlags: 0
@@ -2605,7 +2605,7 @@ MonoBehaviour:
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 2003288017891731506}
   spriteHover: {fileID: 2003288017511927146}
-  spriteType: {fileID: 2003288018133301024}
+  spawnPrefabType: {fileID: 0}
 --- !u!1 &2003288017414908982
 GameObject:
   m_ObjectHideFlags: 0
@@ -3068,7 +3068,7 @@ MonoBehaviour:
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 2003288018644432776}
   spriteHover: {fileID: 2003288018578995538}
-  spriteType: {fileID: 2003288019033665970}
+  spawnPrefabType: {fileID: 0}
 --- !u!114 &505536697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3199,7 +3199,7 @@ MonoBehaviour:
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 2003288017450705099}
   spriteHover: {fileID: 2003288019250260302}
-  spriteType: {fileID: 2003288017771254239}
+  spawnPrefabType: {fileID: 0}
 --- !u!1 &2003288017511927148
 GameObject:
   m_ObjectHideFlags: 0
@@ -3483,7 +3483,7 @@ MonoBehaviour:
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 2003288017843965756}
   spriteHover: {fileID: 2003288019003735335}
-  spriteType: {fileID: 2003288017396825216}
+  spawnPrefabType: {fileID: 0}
 --- !u!1 &2003288017534540590
 GameObject:
   m_ObjectHideFlags: 0
@@ -3851,7 +3851,7 @@ MonoBehaviour:
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 2003288017769737573}
   spriteHover: {fileID: 2003288017341636624}
-  spriteType: {fileID: 2003288018375321669}
+  spawnPrefabType: {fileID: 0}
 --- !u!114 &2003288017589572037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3982,7 +3982,7 @@ MonoBehaviour:
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 2003288019008889015}
   spriteHover: {fileID: 2003288018968236416}
-  spriteType: {fileID: 2003288017863345447}
+  spawnPrefabType: {fileID: 0}
 --- !u!1 &2003288017598683377
 GameObject:
   m_ObjectHideFlags: 0
@@ -4184,7 +4184,7 @@ MonoBehaviour:
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 2003288019284750161}
   spriteHover: {fileID: 2003288017350221551}
-  spriteType: {fileID: 2003288018954228116}
+  spawnPrefabType: {fileID: 0}
 --- !u!114 &369972924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4481,7 +4481,7 @@ MonoBehaviour:
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 2003288019269634148}
   spriteHover: {fileID: 2003288019168339660}
-  spriteType: {fileID: 2003288018939633049}
+  spawnPrefabType: {fileID: 0}
 --- !u!1 &2003288017648188064
 GameObject:
   m_ObjectHideFlags: 0
@@ -5094,7 +5094,7 @@ MonoBehaviour:
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 2003288018151532533}
   spriteHover: {fileID: 2003288017460970746}
-  spriteType: {fileID: 2003288019190409212}
+  spawnPrefabType: {fileID: 0}
 --- !u!1 &2003288017754284469
 GameObject:
   m_ObjectHideFlags: 0
@@ -5652,7 +5652,7 @@ MonoBehaviour:
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 2003288018590168219}
   spriteHover: {fileID: 2003288017616334318}
-  spriteType: {fileID: 2003288018831854368}
+  spawnPrefabType: {fileID: 0}
 --- !u!114 &972685467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6235,7 +6235,7 @@ MonoBehaviour:
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 2003288017445984103}
   spriteHover: {fileID: 2003288017605052899}
-  spriteType: {fileID: 2003288018801255192}
+  spawnPrefabType: {fileID: 0}
 --- !u!114 &811670767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6461,7 +6461,7 @@ MonoBehaviour:
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 2003288019429812516}
   spriteHover: {fileID: 2003288017667843151}
-  spriteType: {fileID: 2003288018467958249}
+  spawnPrefabType: {fileID: 0}
 --- !u!1 &2003288018111932105
 GameObject:
   m_ObjectHideFlags: 0
@@ -7280,7 +7280,7 @@ MonoBehaviour:
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 2003288018446477602}
   spriteHover: {fileID: 2003288018850005752}
-  spriteType: {fileID: 2003288018692431711}
+  spawnPrefabType: {fileID: 0}
 --- !u!114 &552407906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7412,7 +7412,7 @@ MonoBehaviour:
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 2003288019306782792}
   spriteHover: {fileID: 2003288019109960696}
-  spriteType: {fileID: 2003288018217472065}
+  spawnPrefabType: {fileID: 0}
 --- !u!114 &608946266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7544,7 +7544,7 @@ MonoBehaviour:
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 2003288018843312740}
   spriteHover: {fileID: 2003288018463250494}
-  spriteType: {fileID: 2003288019271110551}
+  spawnPrefabType: {fileID: 0}
 --- !u!114 &2003288018370777902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8388,7 +8388,7 @@ MonoBehaviour:
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 2003288018694508096}
   spriteHover: {fileID: 2003288017547907056}
-  spriteType: {fileID: 2003288018058773698}
+  spawnPrefabType: {fileID: 0}
 --- !u!1 &2003288018590168221
 GameObject:
   m_ObjectHideFlags: 0
@@ -8589,7 +8589,7 @@ MonoBehaviour:
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 2003288017706990522}
   spriteHover: {fileID: 2003288018729218595}
-  spriteType: {fileID: 2003288017942805341}
+  spawnPrefabType: {fileID: 0}
 --- !u!1 &2003288018644432778
 GameObject:
   m_ObjectHideFlags: 0
@@ -8790,7 +8790,7 @@ MonoBehaviour:
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 2003288018111932119}
   spriteHover: {fileID: 2003288019097322526}
-  spriteType: {fileID: 2003288018470531145}
+  spawnPrefabType: {fileID: 0}
 --- !u!1 &2003288018692431698
 GameObject:
   m_ObjectHideFlags: 0
@@ -9549,7 +9549,7 @@ MonoBehaviour:
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 2003288017662227481}
   spriteHover: {fileID: 2003288019143880844}
-  spriteType: {fileID: 2003288017414908979}
+  spawnPrefabType: {fileID: 0}
 --- !u!1 &2003288018814343167
 GameObject:
   m_ObjectHideFlags: 0
@@ -9940,7 +9940,7 @@ MonoBehaviour:
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 2003288017517013795}
   spriteHover: {fileID: 2003288017351603043}
-  spriteType: {fileID: 2003288019038599513}
+  spawnPrefabType: {fileID: 0}
 --- !u!1 &2003288018843312742
 GameObject:
   m_ObjectHideFlags: 0
@@ -10225,7 +10225,7 @@ MonoBehaviour:
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 2003288018846447540}
   spriteHover: {fileID: 2003288019140747032}
-  spriteType: {fileID: 2003288018738338781}
+  spawnPrefabType: {fileID: 0}
 --- !u!114 &2003288018847309041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10439,7 +10439,7 @@ MonoBehaviour:
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 2003288018248018517}
   spriteHover: {fileID: 2003288018031021147}
-  spriteType: {fileID: 2003288019051073371}
+  spawnPrefabType: {fileID: 0}
 --- !u!1 &2003288018889925065
 GameObject:
   m_ObjectHideFlags: 0
@@ -10557,7 +10557,7 @@ MonoBehaviour:
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 2003288018115836084}
   spriteHover: {fileID: 2003288017598683391}
-  spriteType: {fileID: 2003288018754876857}
+  spawnPrefabType: {fileID: 0}
 --- !u!1 &2003288018893595697
 GameObject:
   m_ObjectHideFlags: 0
@@ -11114,7 +11114,7 @@ MonoBehaviour:
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 2003288019428002082}
   spriteHover: {fileID: 2003288017354817736}
-  spriteType: {fileID: 2003288018780790045}
+  spawnPrefabType: {fileID: 0}
 --- !u!1 &2003288019003735321
 GameObject:
   m_ObjectHideFlags: 0
@@ -11932,7 +11932,7 @@ MonoBehaviour:
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 2003288017534540588}
   spriteHover: {fileID: 2003288018520008162}
-  spriteType: {fileID: 2003288018822200202}
+  spawnPrefabType: {fileID: 0}
 --- !u!1 &2003288019140747034
 GameObject:
   m_ObjectHideFlags: 0
@@ -12395,7 +12395,7 @@ MonoBehaviour:
   - {fileID: 2003288017624022950}
   spriteSelection: {fileID: 2003288018121501499}
   spriteHover: {fileID: 2003288017648188078}
-  spriteType: {fileID: 2003288018451634774}
+  spawnPrefabType: {fileID: 0}
 --- !u!1 &2003288019223955932
 GameObject:
   m_ObjectHideFlags: 0
@@ -13201,7 +13201,7 @@ MonoBehaviour:
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 2003288017754284467}
   spriteHover: {fileID: 2003288019056801823}
-  spriteType: {fileID: 2003288017933157526}
+  spawnPrefabType: {fileID: 0}
 --- !u!1 &2003288019375129947
 GameObject:
   m_ObjectHideFlags: 0
@@ -13403,7 +13403,7 @@ MonoBehaviour:
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 2003288017666286272}
   spriteHover: {fileID: 2003288018893595711}
-  spriteType: {fileID: 2003288019223955929}
+  spawnPrefabType: {fileID: 0}
 --- !u!114 &2003288019387666631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13544,7 +13544,7 @@ MonoBehaviour:
   - {fileID: 2003288018581547138}
   spriteSelection: {fileID: 2003288018912680042}
   spriteHover: {fileID: 2003288019375129945}
-  spriteType: {fileID: 2003288017962656619}
+  spawnPrefabType: {fileID: 0}
 --- !u!1 &2003288019428002084
 GameObject:
   m_ObjectHideFlags: 0
@@ -14837,7 +14837,7 @@ MonoBehaviour:
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 2430448729252610730}
   spriteHover: {fileID: 230634642356501157}
-  spriteType: {fileID: 3715765295935706370}
+  spawnPrefabType: {fileID: 0}
 --- !u!1 &4183860622627323123
 GameObject:
   m_ObjectHideFlags: 0
@@ -16641,7 +16641,7 @@ MonoBehaviour:
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 6069708007606287475}
   spriteHover: {fileID: 3174373234117201252}
-  spriteType: {fileID: 974750189644015524}
+  spawnPrefabType: {fileID: 0}
 --- !u!1 &8939059609029109531
 GameObject:
   m_ObjectHideFlags: 0
@@ -16842,7 +16842,7 @@ MonoBehaviour:
   cellsToActivateByScroll: []
   spriteSelection: {fileID: 9083970602903637600}
   spriteHover: {fileID: 3192108288442504795}
-  spriteType: {fileID: 3050486166306896178}
+  spawnPrefabType: {fileID: 0}
 --- !u!1001 &8778541983426237958
 PrefabInstance:
   m_ObjectHideFlags: 0

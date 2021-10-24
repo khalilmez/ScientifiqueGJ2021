@@ -64,6 +64,9 @@ public class Cell : MonoBehaviour
 			case CellType.PaperScroll:
 				p = Prefabs.paperScrollDetails.prefab;
 				break;
+			case CellType.Monastery:
+				p = Prefabs.monasteryDetails.prefab;
+				break;
 		}
 
 		if (p != null)
@@ -97,17 +100,11 @@ public class Cell : MonoBehaviour
 		// Action specific to each Type
 		switch (cellType)
 		{
-			case CellType.Path:
-				break;
 			case CellType.Roma:
 				Level.LevelState = LevelState.EndGame;
 				break;
-			case CellType.Auberge:
-				break;
 			case CellType.PaperScroll:
 				ActivateCellWithScroll();
-				break;
-			default:
 				break;
 		}
 	}
@@ -136,13 +133,6 @@ public class Cell : MonoBehaviour
 				{
 					Prefabs.romaDetails.audiosEntrance.Random().Play();
 				}
-				break;
-			case CellType.Auberge:
-				break;
-			case CellType.PaperScroll:
-
-				break;
-			default:
 				break;
 		}
 	}

@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5dfb64fecee7b347b9c0697ae4266c9, type: 3}
   m_Name: Path
   m_EditorClassIdentifier: 
-  quests: []
-  spritesBuilding: []
+  prefab: {fileID: 0}
   audiosEntrance: []
   entranceEffects:
   - {fileID: 5586701228039997475, guid: 2c4e5f055003f104cb5fd2b27c22f338, type: 3}

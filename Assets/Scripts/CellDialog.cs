@@ -28,6 +28,6 @@ public class CellDialog : MonoBehaviour
 
 		isAvailable = false;
 		QuestDisplay.Instance.Quest = questCell;
-		QuestDisplay.Instance.Init();
+		QuestDisplay.Instance.Show();
 	}
 }

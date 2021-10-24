@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   config: {fileID: 11400000, guid: 166c550b5c0dc824a984424b026aa74a, type: 2}
-  playerSpawn: {fileID: 0}
+  playerSpawn: {fileID: 3864355875017583542}
 --- !u!1001 &1025301878883169655
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -201,6 +201,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2424268357270040267}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3864355875017583542 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1442356995755672957, guid: 818b718df9868c7488a55bb928f064c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 2424268357270040267}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c58ce4d14c58c304599c046483c4243d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4102507544592861554
 PrefabInstance:
   m_ObjectHideFlags: 0
