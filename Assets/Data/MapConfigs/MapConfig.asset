@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthConsumption: 1
   winConditions:
-  - description: Sans abri
+  - description: "Enfin arriv\xE9, la route fut longue..."
     healthRequired: 0
     goldRequired: 0
-  - description: Noble
+  - description: "Des Nobles vous invitent \xE0 leur banquet !"
     healthRequired: 3
     goldRequired: 5
-  - description: Pape
+  - description: Le Pape en personne vous accueille !
     healthRequired: 10
     goldRequired: 10
   cellActivationTiming: 0.08

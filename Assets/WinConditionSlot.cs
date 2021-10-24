@@ -20,12 +20,20 @@ public class WinConditionSlot : MonoBehaviour
 
 	public void Setup(WinCondition condition)
 	{
-		descriptionText.text = condition.description;
 
 		healthRequiredText.text = $"{condition.healthRequired}+";
 		healthRequiredText.color = Player.Health >= condition.healthRequired ? positiveScore : negativeScore;
 
 		goldRequiredText.text = $"{condition.goldRequired}+";
 		goldRequiredText.color = Player.Gold >= condition.goldRequired ? positiveScore : negativeScore;
+
+		if (Player.Health >= condition.healthRequired && Player.Gold >= condition.goldRequired)
+		{
+			descriptionText.text = condition.description;
+		}
+		else
+		{
+			descriptionText.text = $"<s>{condition.description}</s>";
+		}
 	}
 }
