@@ -42,4 +42,9 @@ public class PopupSingleton : MonoBehaviour
 		transform.DOScale(animationDefault, animationDuration).SetEase(Ease.OutSine);
 		group.DOFade(0f, animationDuration);
 	}
+
+	public void PlayClick()
+	{
+		Music.PlayClick();
+	}
 }

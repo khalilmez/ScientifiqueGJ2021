@@ -264,9 +264,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Tools.SceneBase, Assembly-CSharp
-        m_MethodName: ReloadLevel
+      - m_Target: {fileID: 3920676886688085540}
+        m_TargetAssemblyTypeName: PopupSingleton, Assembly-CSharp
+        m_MethodName: PlayClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -689,6 +689,38 @@ MonoBehaviour:
   _group:
     _source: 0
     _localReference: {fileID: 0}
+  jingleLose:
+    isUsingClips: 0
+    clip: {fileID: 8300000, guid: a0c5ff917c3cb87459238a88043da7fc, type: 3}
+    clips: []
+    mixerGroup: {fileID: -1528966638099581391, guid: dbd143edd4df0224d92ac4ff39f0844e,
+      type: 2}
+    loopType: 0
+    timeBetweenLoop:
+      min: 1
+      max: 3
+    isPitchModified: 0
+    pitchMaxVariation:
+      min: -0.1
+      max: 0.1
+    autoDestroy: 0
+    multiplier: 5
+  musiClose:
+    isUsingClips: 0
+    clip: {fileID: 8300000, guid: f1c9c586b78e67d4dad873a2b57aa840, type: 3}
+    clips: []
+    mixerGroup: {fileID: 7922394082270181982, guid: dbd143edd4df0224d92ac4ff39f0844e,
+      type: 2}
+    loopType: 0
+    timeBetweenLoop:
+      min: 1
+      max: 3
+    isPitchModified: 0
+    pitchMaxVariation:
+      min: -0.1
+      max: 0.1
+    autoDestroy: 0
+    multiplier: 5
 --- !u!1 &2035726249
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,6 +842,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 641197003986762038}
+        m_TargetAssemblyTypeName: PopupSingleton, Assembly-CSharp
+        m_MethodName: PlayClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Tools.SceneBase, Assembly-CSharp
         m_MethodName: ReloadLevel
@@ -1353,7 +1397,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 29.3
+  m_fontSize: 29.35
   m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1797,6 +1841,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   positiveScore: {r: 0, g: 1, b: 0, a: 1}
   negativeScore: {r: 1, g: 0, b: 0, a: 1}
+  bonusSound:
+    isUsingClips: 0
+    clip: {fileID: 8300000, guid: 7cb4503356a9a46468cd2836985040b9, type: 3}
+    clips: []
+    mixerGroup: {fileID: -8086770787028973563, guid: dbd143edd4df0224d92ac4ff39f0844e,
+      type: 2}
+    loopType: 0
+    timeBetweenLoop:
+      min: 1
+      max: 3
+    isPitchModified: 1
+    pitchMaxVariation:
+      min: -0.1
+      max: 0.1
+    autoDestroy: 0
+    multiplier: 5
+  malusSound:
+    isUsingClips: 0
+    clip: {fileID: 8300000, guid: 403685e31dd449240ae7146dee58c30d, type: 3}
+    clips: []
+    mixerGroup: {fileID: 3204074314799114193, guid: dbd143edd4df0224d92ac4ff39f0844e,
+      type: 2}
+    loopType: 0
+    timeBetweenLoop:
+      min: 1
+      max: 3
+    isPitchModified: 1
+    pitchMaxVariation:
+      min: -0.1
+      max: 0.1
+    autoDestroy: 0
+    multiplier: 5
   healthText: {fileID: 8024995809817263292}
   staminaText: {fileID: 8024995809547322136}
   forceText: {fileID: 8024995810153822723}

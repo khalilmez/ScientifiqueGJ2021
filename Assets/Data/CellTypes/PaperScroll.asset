@@ -14,6 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 3303488438526171742, guid: 191c33642a51da24ba0719e9a5b453fd, type: 3}
   audiosEntrance: []
-  jingles: []
+  jingles:
+  - isUsingClips: 0
+    clip: {fileID: 8300000, guid: 8a7247de12e0403478f1bb9ea0dfb0dc, type: 3}
+    clips: []
+    mixerGroup: {fileID: 7680438590372867242, guid: dbd143edd4df0224d92ac4ff39f0844e,
+      type: 2}
+    loopType: 0
+    timeBetweenLoop:
+      min: 0
+      max: 0
+    isPitchModified: 1
+    pitchMaxVariation:
+      min: -0.1
+      max: 0.1
+    autoDestroy: 0
+    multiplier: 0
   entranceEffects:
   - {fileID: 5586701228039997475, guid: 2c4e5f055003f104cb5fd2b27c22f338, type: 3}

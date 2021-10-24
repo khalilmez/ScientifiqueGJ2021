@@ -72,6 +72,8 @@ public class LevelController : SceneBase
 	protected override void Start()
 	{
 		base.Start();
+
+		Music.FadIn();
 		StartCoroutine(StartCore());
 	}
 

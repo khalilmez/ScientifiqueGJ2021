@@ -15,6 +15,10 @@ public class HUD : MonoBehaviour
 	[SerializeField] private Color positiveScore = Color.green;
 	[SerializeField] private Color negativeScore = Color.red;
 
+	[Header("Sounds")]
+	[SerializeField] private AudioExpress bonusSound;
+	[SerializeField] private AudioExpress malusSound;
+
 	[Header("References")]
 	[SerializeField] private TextMeshProUGUI healthText;
 	[SerializeField] private TextMeshProUGUI staminaText;
@@ -37,9 +41,17 @@ public class HUD : MonoBehaviour
 			healthText.color = negativeScore;
 			healthText.DOColor(Color.white, 0.3f).SetEase(Ease.OutSine);
 
+			if (Level.LevelState == LevelState.BoardPlaying)
+			{
+				malusSound.Play();
+			}
 		}
 		else if (int.Parse(healthText.text) < value)
 		{
+			if (Level.LevelState == LevelState.BoardPlaying)
+			{
+				bonusSound.Play();
+			}
 			healthText.color = positiveScore;
 			healthText.DOColor(Color.white, 0.3f).SetEase(Ease.OutSine);
 		}
@@ -72,11 +84,20 @@ public class HUD : MonoBehaviour
 			goldText.color = negativeScore;
 			goldText.DOColor(Color.white, 0.3f).SetEase(Ease.OutSine);
 
+			if (Level.LevelState == LevelState.BoardPlaying)
+			{
+				malusSound.Play();
+			}
 		}
 		else if (int.Parse(goldText.text) < value)
 		{
 			goldText.color = positiveScore;
 			goldText.DOColor(Color.white, 0.3f).SetEase(Ease.OutSine);
+
+			if (Level.LevelState == LevelState.BoardPlaying)
+			{
+				bonusSound.Play();
+			}
 		}
 
 		goldText.text = Mathf.Max(0, value).ToString();
