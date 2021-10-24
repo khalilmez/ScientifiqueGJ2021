@@ -12,6 +12,8 @@ public class HUD : MonoBehaviour
 {
 	public static HUD Instance { get; private set; }
 
+	[SerializeField] private Color positiveScore = Color.green;
+	[SerializeField] private Color negativeScore = Color.red;
 
 	[Header("References")]
 	[SerializeField] private TextMeshProUGUI healthText;
@@ -27,6 +29,10 @@ public class HUD : MonoBehaviour
 
 	public void SetHealth(int value)
 	{
+		healthText.DOKill();
+		healthText.color = int.Parse(healthText.text) > value ? negativeScore : positiveScore;
+		healthText.DOColor(Color.white, 0.3f).SetEase(Ease.OutSine);
+
 		healthText.text = Mathf.Max(0, value).ToString();
 	}
 
@@ -47,6 +53,10 @@ public class HUD : MonoBehaviour
 
 	public void SetGold(int value)
 	{
+		goldText.DOKill();
+		goldText.color = int.Parse(goldText.text) > value ? negativeScore : positiveScore;
+		goldText.DOColor(Color.white, 0.3f).SetEase(Ease.OutSine);
+
 		goldText.text = Mathf.Max(0, value).ToString();
 	}
 
