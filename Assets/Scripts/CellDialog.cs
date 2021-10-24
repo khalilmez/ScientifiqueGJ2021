@@ -27,7 +27,7 @@ public class CellDialog : MonoBehaviour
 			return;
 
 		isAvailable = false;
-		QuestDisplay.Instance.quest = questCell;
+		QuestDisplay.Instance.Quest = questCell;
 		QuestDisplay.Instance.Init();
 	}
 }
