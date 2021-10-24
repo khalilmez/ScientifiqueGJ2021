@@ -17,11 +17,13 @@ public class Cell : MonoBehaviour
 	[Header("References")]
 	[SerializeField] private SpriteRenderer spriteSelection;
 	[SerializeField] private SpriteRenderer spriteHover;
-	[SerializeField] private SpriteRenderer spriteType;
+	[SerializeField] private Transform spawnPrefabType;
 
 	private bool isSelected;
 	private bool scrollUsed;
 	private bool isHover;
+	private bool setupScrollDone;
+	private GameObject typePrefab;
 
 	public bool IsSelected
 	{
@@ -47,40 +49,43 @@ public class Cell : MonoBehaviour
 
 	private void Start()
 	{
+		GameObject p = null;
 		switch (cellType)
 		{
 			case CellType.Path:
-				if (!Prefabs.pathDetails.spritesBuilding.IsEmpty())
-				{
-					spriteType.sprite = Prefabs.pathDetails.spritesBuilding.Random();
-				}
+				p = Prefabs.pathDetails.prefab;
 				break;
 			case CellType.Roma:
-				if (!Prefabs.romaDetails.spritesBuilding.IsEmpty())
-				{
-					spriteType.sprite = Prefabs.romaDetails.spritesBuilding.Random();
-				}
+				p = Prefabs.romaDetails.prefab;
 				break;
 			case CellType.Auberge:
-				if (!Prefabs.aubergeDetails.spritesBuilding.IsEmpty())
-				{
-					spriteType.sprite = Prefabs.aubergeDetails.spritesBuilding.Random();
-				}
+				p = Prefabs.aubergeDetails.prefab;
 				break;
 			case CellType.PaperScroll:
-				if (!Prefabs.paperScrollDetails.spritesBuilding.IsEmpty())
-				{
-					spriteType.sprite = Prefabs.paperScrollDetails.spritesBuilding.Random();
-				}
-				break;
-			default:
+				p = Prefabs.paperScrollDetails.prefab;
 				break;
 		}
 
-		spriteType.gameObject.SetActive(spriteType.sprite != null);
+		if (p != null)
+		{
+			typePrefab = Instantiate(p, spawnPrefabType);
+		}
 
+		SetupScrollCells();
+	}
+
+	public void SetupScrollCells()
+	{
+		if (setupScrollDone)
+			return;
+
+		setupScrollDone = true;
 		cellsToActivateByScroll = cellsToActivateByScroll.WithoutNullValues().ToList();
-		cellsToActivateByScroll.ForEach(x => x.gameObject.SetActive(false));
+		foreach (var cell in cellsToActivateByScroll)
+		{
+			cell.SetupScrollCells();
+			cell.gameObject.SetActive(false);
+		}
 	}
 
 	public void DoEntranceAction()
@@ -89,6 +94,7 @@ public class Cell : MonoBehaviour
 		ShowEntranceEffect();
 		OpenDialog();
 
+		// Action specific to each Type
 		switch (cellType)
 		{
 			case CellType.Path:
@@ -99,7 +105,6 @@ public class Cell : MonoBehaviour
 			case CellType.Auberge:
 				break;
 			case CellType.PaperScroll:
-				spriteType.gameObject.SetActive(false);
 				ActivateCellWithScroll();
 				break;
 			default:
@@ -148,6 +153,8 @@ public class Cell : MonoBehaviour
 			return;
 
 		scrollUsed = true;
+		DeleteTypePrefab();
+
 		StartCoroutine(ActivateCellWithScrollCore());
 	}
 
@@ -188,6 +195,16 @@ public class Cell : MonoBehaviour
 		{
 			p = Instantiate(p);
 			p.transform.position = transform.position;
+		}
+	}
+
+	private void DeleteTypePrefab()
+	{
+		if (typePrefab != null)
+		{
+			typePrefab.transform.DOKill();
+			typePrefab.transform.DOScale(0f, 0.5f).SetEase(Ease.OutSine);
+			typePrefab.transform.DOLocalMoveZ(-2f, 0.5f).SetEase(Ease.OutSine).OnComplete(() => Destroy(typePrefab));
 		}
 	}
 }

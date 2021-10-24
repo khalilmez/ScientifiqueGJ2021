@@ -9,16 +9,17 @@ using static Facade;
 
 public class QuestDisplay : MonoBehaviour
 {
+	private Vector3 animationDefault = Vector3.one * 0.95f;
+
 	public static QuestDisplay Instance { get; private set; }
 
 	[Header("Animations")]
-	[SerializeField] private float fadDuration = 0.2f;
+	[SerializeField] private float animationDuration = 0.2f;
 
 	[Header("References")]
 	public TextMeshProUGUI Title;
 	public TextMeshProUGUI Description;
-	public Image background;
-	public List<GameObject> choicesList = new List<GameObject>();
+	public List<QuestChoice> choicesList = new List<QuestChoice>();
 	public Dictionary<string, Choice> choicesDictionary;
 
 	[SerializeField] private Dependency<CanvasGroup> _group;
@@ -36,57 +37,57 @@ public class QuestDisplay : MonoBehaviour
 		if (!IsActive)
 		{
 			group.DOKill();
-			group.DOFade(1f, 0.2f).OnComplete(() => { group.interactable = true; });
+			transform.localScale = animationDefault;
+			transform.DOScale(Vector3.one, animationDuration).SetEase(Ease.OutSine);
+			group.DOFade(1f, animationDuration).OnComplete(() => { group.interactable = true; });
 		}
 
 		choicesDictionary = new Dictionary<string, Choice>();
 		Title.text = Quest.title;
 		Description.text = Quest.description;
-		choicesList.ForEach(x => x.SetActive(false));
+
+		// Reset Choices
+		choicesList.ForEach(x => x.gameObject.SetActive(false));
+		choicesList.ForEach(x => x.Init());
 
 		choices = Quest.choices;
 		if (choices.IsEmpty())
 		{
-			choicesList[0].transform.Find("Text").GetComponent<TextMeshProUGUI>().text = "Continuer..";
-			choicesList[0].SetActive(true);
+			choicesList[0].Text = "Continuer..";
+			choicesList[0].gameObject.SetActive(true);
 		}
 		else
 		{
 			int i = 0;
-			foreach (GameObject choice in choicesList)
+			foreach (QuestChoice choice in choicesList)
 			{
 				if (i < choices.Count && choices[i] != null)
 				{
-					choice.transform.Find("Text").GetComponent<TextMeshProUGUI>().text = choices[i].text;
+					choice.Content = choices[i];
+					choice.Interactible = (Player.Gold + choices[i].bonusGold) > 0;
 					choicesDictionary.Add(choice.name, choices[i]);
-					if ((Player.Gold + choices[i].bonusGold) < 0)
-					{
-						choice.GetComponent<Button>().interactable = false;
-					}
-					else
-					{
-						choice.GetComponent<Button>().interactable = true;
-					}
-					choice.SetActive(true);
+					choice.gameObject.SetActive(true);
 				}
 				else
 				{
-					choice.SetActive(false);
+					choice.gameObject.SetActive(false);
 				}
+
 				i++;
 			}
 		}
 	}
 
-	public void Submit(GameObject button)
+	public void Submit(QuestChoice choice)
 	{
-		if (choicesDictionary.ContainsKey(button.name))
+		if (choice.Content != null)
 		{
-			Player.Health += choicesDictionary[button.name].bonusHealth;
-			Player.Gold += choicesDictionary[button.name].bonusGold;
-			if (choicesDictionary[button.name].conclusion != null)
+
+			Player.Health += choice.BonusHealth;
+			Player.Gold += choice.BonusGold;
+			if (choice.Content.conclusion != null)
 			{
-				Quest = choicesDictionary[button.name].conclusion;
+				Quest = choice.Content.conclusion;
 				Init();
 			}
 			else
@@ -104,6 +105,7 @@ public class QuestDisplay : MonoBehaviour
 	{
 		group.DOKill();
 		group.interactable = false;
-		group.DOFade(0f, fadDuration);
+		transform.DOScale(animationDefault, animationDuration).SetEase(Ease.OutSine);
+		group.DOFade(0f, animationDuration);
 	}
 }

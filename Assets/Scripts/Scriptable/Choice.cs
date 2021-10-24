@@ -15,6 +15,7 @@ public class Choice : ScriptableObject
 	public Quest conclusion;
 
 	[Space]
+	public bool diplayStats = true;
 	public int bonusHealth;
 	public int bonusGold;
 }

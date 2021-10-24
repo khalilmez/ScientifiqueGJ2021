@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: AubergeRest
   m_EditorClassIdentifier: 
   text: "Voici quelques sequins sonnants et tr\xE9buchants pour ta peine, aubergiste
-    ! - 2 Argent, + 2 sant\xE9"
+    !"
   conclusion: {fileID: 0}
+  diplayStats: 1
   bonusHealth: 2
   bonusGold: -3

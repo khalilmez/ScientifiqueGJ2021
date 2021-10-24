@@ -15,5 +15,6 @@ MonoBehaviour:
   text: "Fl\xFBte, j'aurais d\xFB \xE9couter le pr\xEAtre quand j'\xE9tais gamin...
     -5 Vie"
   conclusion: {fileID: 0}
+  diplayStats: 1
   bonusHealth: -5
   bonusGold: 0

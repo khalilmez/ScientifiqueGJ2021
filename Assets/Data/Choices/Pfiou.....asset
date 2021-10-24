@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: 'Pfiou..... '
   conclusion: {fileID: 0}
+  diplayStats: 1
   bonusHealth: 0
   bonusGold: 0

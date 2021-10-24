@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: 'Offrez-moi l''asile pour la nuit : +2 Vie'
   conclusion: {fileID: 0}
+  diplayStats: 1
   bonusHealth: 2
   bonusGold: 0

@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: Vers la droite ?
   conclusion: {fileID: 11400000, guid: f5956b7a141daca47990c61d593592ec, type: 2}
+  diplayStats: 0
   bonusHealth: -5
   bonusGold: 0

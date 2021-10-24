@@ -129,11 +129,13 @@ public class PlayerController : MonoBehaviour
 		mover = transform.DOMove(cell.transform.position, duration).SetEase(Ease.OutSine);
 		yield return mover.WaitForCompletion();
 
-		cell.DoEntranceAction();
-
 		Health -= Map.Config.healthConsumption;
 
-		ActiveCrossCells();
+		if (Health > 0)
+		{
+			cell.DoEntranceAction();
+			ActiveCrossCells();
+		}
 	}
 
 	private void PlayIdleAnimation()

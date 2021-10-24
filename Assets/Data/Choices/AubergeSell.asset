@@ -15,5 +15,6 @@ MonoBehaviour:
   text: "Je puis divertir vos h\xF4tes si vous vouliez bien me c\xE9der une paillasse
     dans vos \xE9curies : +3 argent"
   conclusion: {fileID: 0}
+  diplayStats: 1
   bonusHealth: 0
   bonusGold: 2

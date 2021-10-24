@@ -27,27 +27,27 @@ public class HUD : MonoBehaviour
 
 	public void SetHealth(int value)
 	{
-		healthText.text = value.ToString();
+		healthText.text = Mathf.Max(0, value).ToString();
 	}
 
 	public void SetStamina(int value)
 	{
-		staminaText.text = value.ToString();
+		staminaText.text = Mathf.Max(0, value).ToString();
 	}
 
 	public void SetForce(int value)
 	{
-		forceText.text = value.ToString();
+		forceText.text = Mathf.Max(0, value).ToString();
 	}
 
 	public void SetCulture(int value)
 	{
-		cultureText.text = value.ToString();
+		cultureText.text = Mathf.Max(0, value).ToString();
 	}
 
 	public void SetGold(int value)
 	{
-		goldText.text = value.ToString();
+		goldText.text = Mathf.Max(0, value).ToString();
 	}
 
 	public void Show()
