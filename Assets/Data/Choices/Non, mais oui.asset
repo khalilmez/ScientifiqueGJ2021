@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70ca7c3d3dbad2a43b2ba736c27d5872, type: 3}
-  m_Name: VillageCartes
+  m_Name: Non, mais oui
   m_EditorClassIdentifier: 
-  text: "Je vais aller jouer aux cartes \xE0 la taverne, parier, c'est gagner"
-  conclusion: {fileID: 11400000, guid: d0f4a102254babe47828d66261b3a130, type: 2}
-  diplayStats: 1
+  text: Hmmm...
+  conclusion: {fileID: 0}
+  diplayStats: 0
   bonusHealth: 0
-  bonusGold: -5
+  bonusGold: 0
