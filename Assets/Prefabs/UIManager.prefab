@@ -2812,7 +2812,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 29.35
+  m_fontSize: 32
   m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4790,7 +4790,7 @@ MonoBehaviour:
   - {fileID: 1016202553671194338}
   - {fileID: 7145469125745699821}
   - {fileID: 1441644035063289457}
-  - {fileID: 0}
+  Character: {fileID: 2359848137975808263}
 --- !u!1001 &3889426939992897545
 PrefabInstance:
   m_ObjectHideFlags: 0

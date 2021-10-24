@@ -22,7 +22,7 @@ public class QuestDisplay : PopupSingleton
 
 	private List<Choice> choices;
 	private Coroutine displayDescriptionCore;
-
+	[SerializeField] GameObject Character;
 	public Quest Quest { get; set; }
 
 	private void Awake() => Instance = this;
@@ -34,7 +34,7 @@ public class QuestDisplay : PopupSingleton
 
 		choicesDictionary = new Dictionary<string, Choice>();
 		Title.text = Quest.title;
-
+		Character.GetComponent<Image>().sprite = Quest.character.sprite;
 		displayDescriptionCore = StartCoroutine(ShowDescriptionCore());
 
 		if (IsActive)
