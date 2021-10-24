@@ -38,6 +38,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: CloudBack
+    uniqueID: 2594603889
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
@@ -52,6 +55,9 @@ TagManager:
     locked: 0
   - name: Parchemin
     uniqueID: 4020342829
+    locked: 0
+  - name: CloudTop
+    uniqueID: 212967829
     locked: 0
   - name: UI
     uniqueID: 2918147477
