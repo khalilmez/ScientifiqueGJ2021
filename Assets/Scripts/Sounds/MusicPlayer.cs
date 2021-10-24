@@ -48,11 +48,13 @@ public class MusicPlayer : MonoBehaviour
 
 	public void FadIn()
 	{
+		audioSource.DOKill();
 		audioSource.DOFade(1f, 0.2f);
 	}
 
 	public void FadOut()
 	{
+		audioSource.DOKill();
 		audioSource.DOFade(0f, 2f);
 	}
 

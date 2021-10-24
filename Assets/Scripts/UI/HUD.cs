@@ -54,8 +54,19 @@ public class HUD : MonoBehaviour
 	public void SetGold(int value)
 	{
 		goldText.DOKill();
-		goldText.color = int.Parse(goldText.text) > value ? negativeScore : positiveScore;
-		goldText.DOColor(Color.white, 0.3f).SetEase(Ease.OutSine);
+
+		goldText.color = Color.white;
+		if (int.Parse(goldText.text) > value)
+		{
+			goldText.color = negativeScore;
+			goldText.DOColor(Color.white, 0.3f).SetEase(Ease.OutSine);
+
+		}
+		else if (int.Parse(goldText.text) < value)
+		{
+			goldText.color = positiveScore;
+			goldText.DOColor(Color.white, 0.3f).SetEase(Ease.OutSine);
+		}
 
 		goldText.text = Mathf.Max(0, value).ToString();
 	}
