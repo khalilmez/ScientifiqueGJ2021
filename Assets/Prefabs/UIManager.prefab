@@ -2475,7 +2475,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7618712639463915927}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2993438088206577505}
+        m_TargetAssemblyTypeName: QuestDisplay, Assembly-CSharp
+        m_MethodName: Submit
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 290527807557880615}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2359848137975808263
 GameObject:
   m_ObjectHideFlags: 0
@@ -2508,10 +2520,10 @@ RectTransform:
   m_Father: {fileID: 8196848392041615105}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 669.6333, y: -99.35651}
-  m_SizeDelta: {x: 580.7433, y: 1100.827}
+  m_AnchorMin: {x: 0.5733636, y: -0.16009295}
+  m_AnchorMax: {x: 1.0856669, y: 1.098985}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1823676905209763884
 CanvasRenderer:
@@ -2534,16 +2546,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 41959e98dede7a24dac28978f7b22778, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -2583,10 +2595,10 @@ RectTransform:
   m_Father: {fileID: 2441395138900797131}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.08243096, y: 0.6375878}
-  m_AnchorMax: {x: 0.5780804, y: 0.7524232}
-  m_AnchoredPosition: {x: 327.5, y: -0.20999146}
-  m_SizeDelta: {x: 655, y: 69.61}
+  m_AnchorMin: {x: 0.082430914, y: 0.6778666}
+  m_AnchorMax: {x: 0.9569615, y: 0.80419123}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8810680854121321310
 CanvasRenderer:
@@ -2721,10 +2733,10 @@ RectTransform:
   m_Father: {fileID: 8196848392041615105}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.37345603, y: 0.3289501}
-  m_AnchorMax: {x: 0.6357054, y: 0.70634824}
-  m_AnchoredPosition: {x: -8.789001, y: -334.6961}
-  m_SizeDelta: {x: 1416.5, y: 260.679}
+  m_AnchorMin: {x: -0.000009769299, y: -0.0000031060642}
+  m_AnchorMax: {x: 1, y: 0.61876446}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1656642334001162634
 CanvasRenderer:
@@ -2884,7 +2896,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2773902414633236181}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2993438088206577505}
+        m_TargetAssemblyTypeName: QuestDisplay, Assembly-CSharp
+        m_MethodName: Submit
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 3216983966247784211}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3373791066986876123
 GameObject:
   m_ObjectHideFlags: 0
@@ -2919,7 +2943,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 25.416504, y: -2.785904}
+  m_AnchoredPosition: {x: 25.416504, y: -2.7858887}
   m_SizeDelta: {x: -176.9739, y: -79.2106}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2950496619864605082
@@ -2978,7 +3002,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 65.25
+  m_fontSize: 65.35
   m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3057,10 +3081,10 @@ RectTransform:
   m_Father: {fileID: 2441395138900797131}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.31786442, y: 0.23566382}
-  m_AnchorMax: {x: 0.6276453, y: 0.6184486}
-  m_AnchoredPosition: {x: 90.758545, y: -49.951202}
-  m_SizeDelta: {x: 1209.857, y: 146.0424}
+  m_AnchorMin: {x: 0.050070174, y: 0.090350814}
+  m_AnchorMax: {x: 0.99075276, y: 0.6529707}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0.0000047683716}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8011236737093255806
 MonoBehaviour:
@@ -3145,10 +3169,10 @@ RectTransform:
   m_Father: {fileID: 2441395138900797131}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -54}
-  m_SizeDelta: {x: 952, y: 58}
+  m_AnchorMin: {x: 0.25330624, y: 0.86104494}
+  m_AnchorMax: {x: 0.80919313, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &7655872429072190623
 CanvasRenderer:
@@ -3206,7 +3230,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 58.9
+  m_fontSize: 72
   m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3341,7 +3365,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 65.95
+  m_fontSize: 66.05
   m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3503,7 +3527,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1356509464804072813}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2993438088206577505}
+        m_TargetAssemblyTypeName: QuestDisplay, Assembly-CSharp
+        m_MethodName: Submit
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 5649660766493134813}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6049095802654415864
 GameObject:
   m_ObjectHideFlags: 0
@@ -3624,7 +3660,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3979191996687600101}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2993438088206577505}
+        m_TargetAssemblyTypeName: QuestDisplay, Assembly-CSharp
+        m_MethodName: Submit
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 6049095802654415864}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6605522130328924090
 GameObject:
   m_ObjectHideFlags: 0
@@ -3659,7 +3707,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 23.835403, y: 0.055496216}
+  m_AnchoredPosition: {x: 23.835388, y: 0.055480957}
   m_SizeDelta: {x: -170.5047, y: -62.7145}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1948645262505854766
@@ -3718,7 +3766,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 66.8
+  m_fontSize: 66.9
   m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5928,7 +5976,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 19.102295, y: 0.42970276}
+  m_AnchoredPosition: {x: 19.102295, y: 0.4296875}
   m_SizeDelta: {x: -105.8964, y: -60.3235}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8758884700965679585
@@ -6061,10 +6109,10 @@ RectTransform:
   m_Father: {fileID: 8196848392041615105}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -731.3307, y: -32.99829}
-  m_SizeDelta: {x: 983.6223, y: 1359.8042}
+  m_AnchorMin: {x: -0.137053, y: -0.16009295}
+  m_AnchorMax: {x: 0.37525025, y: 1.098985}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1134681721187651915
 CanvasRenderer:
@@ -6096,7 +6144,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 6565bab79f179ab4889677f52fa7b771, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
