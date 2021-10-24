@@ -15,7 +15,7 @@ MonoBehaviour:
   title: MONASTERE
   description: Mon fils, le Seigneur vous ait en sa bonne garde ! Que puis-je faire
     pour vous ?
-  character: {fileID: 11400000, guid: 561da9a8bd527e44babbbb0281fece26, type: 2}
+  character: {fileID: 11400000, guid: 8187e66235c46804f8422a58517a5908, type: 2}
   choices:
   - {fileID: 11400000, guid: 1602b29fdee932c4bb3352774470e722, type: 2}
   - {fileID: 11400000, guid: 1ebc3e34b109232499a3e99315c6f128, type: 2}

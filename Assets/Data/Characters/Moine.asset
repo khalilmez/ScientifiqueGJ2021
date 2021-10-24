@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Moine
   m_EditorClassIdentifier: 
   characterName: St Marcelin
-  sprite: {fileID: 21300000, guid: 41959e98dede7a24dac28978f7b22778, type: 3}
+  sprite: {fileID: 21300000, guid: 7617787a63df5834b87c42072f4298fb, type: 3}

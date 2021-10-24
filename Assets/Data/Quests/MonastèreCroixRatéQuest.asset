@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: MONASTERE
   description: 'Un parpaillot ! Appelez l''inquisition ! '
-  character: {fileID: 11400000, guid: 561da9a8bd527e44babbbb0281fece26, type: 2}
+  character: {fileID: 11400000, guid: 8187e66235c46804f8422a58517a5908, type: 2}
   choices:
   - {fileID: 11400000, guid: 07ca485d0372a4a47bd5d2ebd650725a, type: 2}

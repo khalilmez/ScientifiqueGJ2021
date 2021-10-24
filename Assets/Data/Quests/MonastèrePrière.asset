@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: MONASTERE
   description: "De quel c\xF4t\xE9 fait-on le signe de la croix d\xE9j\xE0...???"
-  character: {fileID: 11400000, guid: 561da9a8bd527e44babbbb0281fece26, type: 2}
+  character: {fileID: 11400000, guid: 8187e66235c46804f8422a58517a5908, type: 2}
   choices:
   - {fileID: 11400000, guid: b4d8e9300612766478767acc6c7a7bd6, type: 2}
   - {fileID: 11400000, guid: 585b235601050ee49825f7ff698f2571, type: 2}
